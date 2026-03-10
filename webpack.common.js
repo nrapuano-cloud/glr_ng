@@ -11,7 +11,7 @@ const TerserJSPlugin = require('terser-webpack-plugin');
 module.exports = {
   
   devServer: {
-    port: 9000,
+    port: 9001,
     proxy: {
       '/glr_api': 'http://localhost',
       //changeOrigin: true,
