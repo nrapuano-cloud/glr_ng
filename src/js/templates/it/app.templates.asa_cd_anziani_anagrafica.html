@@ -1,0 +1,415 @@
+<h3 style="text-align: center;color:black;font-weight:bold;border:2px solid #a1a1a1;">CARTELLA PERSONALE UTENTE    </h3></div> <button class="btn pull-right" href="undefined.pdf" title="Export to PDF" type="button"  id="expPDF_ana" download=""> <img src="./css/img/pdf.svg" width="50px"></button><div id="codice" class="form-group col-lg-2 pull-right"><h4 style="text-align: center;color:black;font-weight:bold;border:2px solid #a1a1a1;">MPG.04-01</h4></div><br>
+<form  id="edit">
+    <div class="messages"></div>
+    <input type="hidden"  name="id" id="id">
+    <input type="hidden"  name="id_servizio" id="id_servizio">
+    <input type="hidden"  name="set_data" id="set_data" value="0">
+    
+    <div class="row">
+        <div class="form-group col-sm-12">
+           <label >Servizio</label>
+           <input type="text"   class="form-control" name="servizio" id="servizio"  placeholder="Servizio" readonly/>
+        </div>
+    </div>   
+    <div class="row">
+        <div class="form-group col-sm-4">
+           <label for="first_name">Nome *</label>
+           <input type="text"   class="form-control" name="first_name" id="first_name" value="" placeholder="Nome" />
+        </div>
+        <div class="form-group col-sm-4">
+           <label for="last_name">Cognome *</label>
+           <input type="text"   class="form-control" name="last_name" id="last_name" value=""   placeholder="Cognome" />
+       </div>
+       <div class="form-group col-sm-4">
+        <label for="codice_fiscale">Codice Fiscale * </label>
+        <input type="text"   class="form-control" name="codice_fiscale" id="codice_fiscale"    placeholder="Codice Fiscale" />
+    </div>
+
+    </div>  
+    <div class="row"> 
+        <div class="form-group col-sm-4">
+            <label >Data inserimento</label>
+           <div class="input-group date " id="datetimepicker1">
+                <input type='text' class="form-control "  id="data_inserimento" name="data_inserimento" /> 
+                <span class="input-group-addon">  
+                    <span class="glyphicon glyphicon-calendar"></span> 
+                </span>
+            </div>
+        </div>
+        <div class="form-group col-sm-4">
+            <label >Data dimissioni (vedi Progetto individuale -> dimissioni)</label>
+           <div class="input-group date " id="datetimepicker1a">
+                <input type='text' class="form-control "  id="data_dimissioni" name="data_dimissioni" /> 
+                <span class="input-group-addon">  
+                    <span class="glyphicon glyphicon-calendar"></span> 
+                </span>
+            </div>
+        </div>
+        <div id="data_agg">
+            <div class="form-group col-sm-4">
+                <label >Data aggiornamento cartella</label>
+                <input type='text' class="form-control "  id="data_aggiornamento" name="data_aggiornamento" readonly/> 
+            </div>
+        </div>
+      
+    </div>
+        
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading1">
+                    <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                        <label >DATI ANAGRAFICI/CONOSCITIVI</label><span class="badge"></span> 
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading1">
+                <div class="panel-body">
+                    <div class="row">
+                       
+                      
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-sm-8">
+                            <label >Nata/o a:</label>
+                            <input type="text"   class="form-control" name="nato" id="nato"    placeholder="Nata/o a" />
+                        </div>
+                        <div class="form-group col-sm-4">
+                            <label >Data di nascita:</label>
+                           <div class="input-group date " id="datetimepicker3">
+                                <input type='text' class="form-control "  id="data_nascita" name="data_nascita" /> 
+                                <span class="input-group-addon">  
+                                    <span class="glyphicon glyphicon-calendar"></span> 
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">    
+                        <div class="form-group col-sm-4">
+                            <label >Sesso:</label>
+                            <div class="input-group">
+                               
+                                <span class="input-group-addon "><input type="radio" value="Maschio" name="sesso" id="sesso1" aria-label="..."> Maschio </span>
+                                <span class="input-group-addon "><input type="radio" value="Femmina" name="sesso" id="sesso2" aria-label="..."> Femmina </span>
+                             
+                            </div><!-- /input-group -->
+                            
+                        </div>
+                        <div class="form-group col-sm-8">
+                            <label>Stato Civile: </label>
+                            <input type="text"   class="form-control" name="stato_civile" id="stato_civile"   placeholder="Stato Civile" />
+                        </div>
+                    </div>
+                    <div class="row"> 
+                        <div class="form-group col-sm-8">
+                            <label >Domicilio / Residenza: </label>
+                            <input type="text"   class="form-control" name="domicilio" id="domicilio" value=""   placeholder="Domicilio / Residenza " />
+                        </div>
+                        <div class="form-group col-sm-4">
+                            <label >Telefono: </label>
+                            <input type="text"   class="form-control" name="telefono" id="telefono" value=""   placeholder="Telefono " />
+                        </div>
+                    </div>
+                    <div class="row">
+                         <div class="form-group col-sm-4" >
+                            <label >Accertamenti invalidità civile:</label>
+                             <div class="input-group">
+                                
+                               
+                                <span class="input-group-addon "><input type="radio" value="SI" name="invalidita" id="invalidita1" aria-label="..."> SI </span>
+                                <span class="input-group-addon "><input type="radio" value="NO" name="invalidita" id="invalidita2" aria-label="..."> NO </span>
+                             
+                            </div><!-- /input-group -->
+                        </div><!-- /.col-lg- -->
+                        
+                        <div class="form-group col-sm-4">
+                            <label >Data accertamento:</label>
+                           <div class="input-group date " id="datetimepicker4">
+                                <input type='text' class="form-control "  id="data_invalidita" name="data_invalidita" /> 
+                                <span class="input-group-addon">  
+                                    <span class="glyphicon glyphicon-calendar"></span> 
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-group col-sm-4">
+                             <label >Invalidità:</label>
+                             <div class="input-group mb-3">
+                               
+                                   <span class="input-group-addon"  >%</span>
+                               
+                                <input type="text"   class="form-control"    name="invalidita_percentuale"  id="invalidita_percentuale"  />
+                            </div>     
+                        </div>
+                    </div>
+                    <div class="row">
+                        
+                        
+                        <div class="form-group col-sm-4" >
+                            <label >Interdizione:</label>
+                            <div class="input-group">
+                                
+                                <span class="input-group-addon"><input type="radio" value="SI" name="interdizione" id="interdizione1" aria-label="..."> SI </span>
+                                <span class="input-group-addon"><input type="radio" value="NO" name="interdizione" id="interdizione2" aria-label="..."> NO </span>
+                             
+                            </div><!-- /input-group -->
+                        </div><!-- /.col-lg-6 -->
+                    </div>    
+                </div>
+            </div>    
+        </div>
+        
+        
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading3">
+                <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="true" aria-controls="collapse3">
+                        <label >REFERENTI</label><span class="badge"></span>
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
+                <div class="panel-body">
+                    
+                    <div class="form-group ">
+                        <label >Recapito dei familiari: </label>
+                        <textarea class="form-control" rows="3" name="ref_familiari" id="ref_familiari"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="comment">Distretto di riferimento:</label>
+                        <textarea class="form-control" rows="3" name="ref_distretto" id="ref_distretto"></textarea>
+                    </div> 
+                    <div class="form-group ">
+                        <label >Medico curante: </label>
+                        <textarea class="form-control" rows="3" name="ref_medico" id="ref_medico"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label >Assistente Sociale di riferimento:</label>
+                        <textarea class="form-control" rows="3" name="ref_assistente" id="ref_assistente"></textarea>
+                    </div>
+                    <div class="form-group ">
+                        <label >Altre figure specialistiche: </label>
+                        <textarea class="form-control" rows="3" name="ref_specialisti" id="ref_specialisti"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label >Tutore/ amministratore di sostegno:</label>
+                        <textarea class="form-control" rows="3" name="ref_sostegno" id="ref_sostegno"></textarea>
+                    </div>  
+                </div>
+            </div>
+        </div>
+        
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading4">
+                    <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse4" aria-expanded="true" aria-controls="collapse4">
+                        <label >INFORMAZIONI SUL NUCLEO FAMILIARE</label><span class="badge"></span> 
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading4">
+                <div class="panel-body">
+                    <div class="form-group ">
+                        <label >Composizione del nucleo: </label>
+                        <textarea class="form-control" rows="3" name="inf_nucleo" id="inf_nucleo"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label >Disponibilità del nucleo familiare all’intervento:</label>
+                        <textarea class="form-control" rows="3" name="inf_intervento" id="inf_intervento"></textarea>
+                    </div> 
+                    <div class="form-group ">
+                        <label >Chi si occupa prevalentemente del soggetto : </label>
+                        <textarea class="form-control" rows="3" name="inf_occupa" id="inf_occupa"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label >Capacità di accesso e di utilizzo dei servizi socio-sanitari:</label>
+                        <textarea class="form-control" rows="3" name="inf_accesso" id="inf_accesso"></textarea>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    
+        
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading5">
+                    <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse5" aria-expanded="true" aria-controls="collapse5">
+                       <label >INFORMAZIONI SANITARIE</label><span class="badge"></span>
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading5">
+                <div class="panel-body">
+                    <div class="form-group ">
+                        <label >Terapie in atto: </label>
+                        <textarea class="form-control" rows="3" name="inf_terapie" id="inf_terapie"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label >Allergie:</label>
+                        <textarea class="form-control" rows="3" name="inf_allergie" id="inf_allergie"></textarea>
+                    </div> 
+                    <div class="form-group ">
+                        <label >Malattie infettive: </label>
+                        <textarea class="form-control" rows="3" name="inf_infettive" id="inf_infettive"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label >Problematiche sanitarie:</label>
+                        <textarea class="form-control" rows="3" name="inf_sanitarie" id="inf_sanitarie"></textarea>
+                    </div> 
+                    <div class="form-group col-sm-4" >
+                        <label >Fumatore:</label>
+                         <div class="input-group">
+                           
+                            <span class="input-group-addon "><input type="radio" value="SI" name="inf_fumatore" id="inf_fumatore1" aria-label="..."> SI </span>
+                            <span class="input-group-addon "><input type="radio" value="NO" name="inf_fumatore" id="inf_fumatore2" aria-label="..."> NO </span>
+                         
+                        </div><!-- /input-group -->
+                    </div><!-- /.col-lg- -->
+                    <div class="form-group">
+                        <label >Altre informazioni  (operazioni subite, ecc.):</label>
+                        <textarea class="form-control" rows="3" name="inf_altre" id="inf_altre"></textarea>
+                    </div> 
+                </div>
+            </div>
+        </div>
+        
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading6">
+                    <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse6" aria-expanded="true" aria-controls="collapse6">
+                        <label >MOTIVAZIONE DELLA PRESA IN CARICO</label><span class="badge"></span>
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading6">
+                <div class="panel-body">
+                    <div class="form-group">
+                        <label ></label>
+                        <textarea class="form-control" rows="6" name="motivazione" id="motivazione"></textarea>
+                    </div> 
+                </div>
+            </div>
+        </div>
+        
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading7">
+                    <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse7" aria-expanded="true" aria-controls="collapse7">
+                        <label >INFORMAZIONI SULLE CAPACITA' DELLA PERSONA</label><span class="badge"></span> 
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse7" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading7">
+                <div class="panel-body">
+                    <div class="form-group">
+                        <label ></label>
+                        <textarea class="form-control" rows="6" name="capacita" id="capacita"></textarea>
+                    </div> 
+                </div>
+            </div>
+        </div>
+        
+         <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading8">
+                    <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse8" aria-expanded="true" aria-controls="collapse8">
+                        <label >PROFILO PERSONALE</label><span class="badge"></span> 
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse8" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading8">
+                <div class="panel-body">
+                    <div class="form-group ">
+                        <label >Breve storia: (descrizione generale della persona, professione svolta, scolarizzazione, luogo in cui ha vissuto, interessi, hobby…) </label>
+                        <textarea class="form-control" rows="3" name="pro_storia" id="pro_storia"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label >Relazioni familiari: (atteggiamenti dell’utente nei confronti di …, livello di consapevolezza della famiglia verso l’utente,…)</label>
+                        <textarea class="form-control" rows="3" name="pro_relazioni" id="pro_relazioni"></textarea>
+                    </div> 
+                    <div class="form-group ">
+                        <label >Livello collaborativo: (collaborazione del nucleo familiare con l’ente inviante, collaborazione del nucleo con i servizi attivati,…): </label>
+                        <textarea class="form-control" rows="3" name="pro_collaborativo" id="pro_collaborativo"></textarea>
+                    </div>
+                    <div class="form-group col-sm-4">
+                        <label >Data </label>
+                       <div class="input-group date " id="datetimepicker5">
+                            <input type='text' class="form-control "  id="pro_data" name="pro_data" /> 
+                            <span class="input-group-addon">  
+                                <span class="glyphicon glyphicon-calendar"></span> 
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-8">
+                        <label>L’educatore/operatore:</label>
+                        <input type="text"   class="form-control" name="pro_operatore" id="pro_operatore"   />
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+         <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading9">
+                    <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse9" aria-expanded="true" aria-controls="collapse9">
+                       <label >ELEMENTI SIGNIFICATIVI DELLA STORIA DELL'UTENTE</label> <span class="badge"></span> 
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse9" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading9">
+                <div class="panel-body">
+                  
+                            
+                            <p class="toolbar">
+                                 <span class="alert"></span>
+                            </p>
+                           <table id="table" class="table-striped def"></table>
+                            
+                        
+                </div>
+            </div>
+        </div>
+    </div>
+                
+                   
+    <br> 
+    <div class="md-form">
+        <label for="note">Note</label>
+        <textarea  id="note" name="note" class="md-textarea form-control" rows="3"></textarea>
+    </div>
+    <br>
+    <label >    * Campi obbligatori</label>
+    <span class="alert1"></span>
+    <br>
+    <br>
+    <button type="submit"  class="btn btn-info  btn-block btn-large" id="invio"  name="invio"  value="Invio" >Invio</button>
+
+
+</form>
+
+<div id="err"></div>
+       
+    <!-- Modal -->
+    <div id="modal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                 
+                    <h4 class="modal-title"></h4>
+                </div>
+                
+                  
+                   
+               
+                <div class="modal-body">
+                     <h3 id="myModalLabel"></h3>
+                   <textarea class="form-control" name="descriz" id="descriz" readonly rows="3"></textarea>
+                   <img   class="img-fluid" id="image"> 
+                </div>
+                <div class="modal-footer">
+                
+                  
+                </div>
+            </div>
+        </div>
+    </div>    

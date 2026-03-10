@@ -1,0 +1,69 @@
+<!-- Registration -->
+<div class="container-fluid">
+
+
+<style>
+        .update {
+            color: #333;
+            margin-right: 5px;
+        }
+        .remove {
+            color: red;
+            margin-left: 5px;
+        }
+        .alert {
+            padding: 0 14px;
+            margin-bottom: 0;
+            display: inline-block;
+        }
+  </style>
+  <br><br><br>
+  <div class="row">
+    <div class="col-lg-12">
+      <ol class="breadcrumb"></ol>
+    </div>
+  </div>
+  <P class="toolbar1">
+    <span class="alert"></span>
+  </p>
+ 
+  
+    <div class="row">
+        <div class="col-lg-12 ">
+            
+            <form  id="manageForm" name="manageForm" method="post">
+                <div class="messages"></div>
+           
+               
+                    <input type="hidden" id="id" >
+                    <div class="row">
+                    
+                        <div class="form-group col-sm-6">
+                            <label >Assegna manutenzione a:   </label><br>
+                            <div class="radio-inline">
+                                <label><input type="radio" value=1 name="manutenzione" id="manutenzione" checked>Interna</label>
+                            </div>
+                            <div class="radio-inline">
+                              <label><input type="radio" value=2 name="manutenzione" id="manutenzione">Esterna</label>
+                            </div>
+                            <div class="radio-inline">
+                              <label><input type="radio" value=3 name="manutenzione" id="manutenzione">Committente</label>
+                            </div>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label id="lblmanutentore" for="manutentore"></label>
+                            <select  id="manutentore" name="manutentore" class="form-control selectpicker"  multiple="multiple" ></select>
+                        </div>
+                    </div>
+                    <div id="intervento"></div>
+                    <span class="alert1"></span>
+                    <br>
+                      <div class="messages"></div>
+                    <br>
+                    <!--button type="submit"  class="btn btn-info  btn-block btn-large" id="submit"  value="Create"></button-->
+             
+         
+            </form>
+        </div>
+    </div>
+</div>

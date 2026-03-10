@@ -1,0 +1,34 @@
+[
+    {
+        
+        "name": "Lunedi",
+        "id": 1
+       
+    },
+    {
+        "name": "Martedi",
+        "id": 2
+    },
+    {
+        "name": "Mercoledi",
+        "id": 3
+    },
+    {
+        "name": "Giovedi",
+        "id": 4
+    },
+    {
+        "name": "Venerdi",
+        "id": 5
+    },
+    {
+        "name": "Sabato",
+        "id": 6
+    },
+    {
+        "name": "Domenica",
+        "id": 7
+    }
+   
+]
+

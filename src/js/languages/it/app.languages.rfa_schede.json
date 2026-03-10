@@ -1,0 +1,11 @@
+{
+    "type": "rfa_schede",
+    "lang" : "it",
+    "new" : "Nuovo",
+    "error_message" : "Si è verificato un errore",
+    "error_message1" : "Si è verificato un graaande errore",
+   
+    "form_messages": "Questo campo è obbligatorio!",
+    "body_message":"Nuova richiesta di manutenzione inviata  con successo!",
+    "header_rma_new_message":"Richiesta Manutenzione Arcacoop" 
+}

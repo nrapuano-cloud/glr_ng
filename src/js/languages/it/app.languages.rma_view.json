@@ -1,0 +1,8 @@
+{
+    "type": "rma_view",
+    "lang" : "it",
+    "new" : "Nuovo",
+    "error_message" : "Si è verificato un errore",
+    "error_message1" : "Si è verificato un graaande errore",
+    "header_hr_message":"Lista User"
+}

@@ -1,0 +1,16 @@
+{
+    "type": "login",
+    "lang" : "it",
+    "form_messages" : {
+        "username": {
+            "required": "Campo obbligatorio",
+            "maxlength": "Massimo 20 caratteri"
+        },
+        "password": {
+            "required": "Campo obbligatorio",
+            "maxlength": "Massimo 20 caratteri"
+        }
+    },
+    "label_button" : "chiudi",
+    "error_message" : "Si è verificato un errore: username o pw non validi!"
+}

@@ -1,0 +1,430 @@
+<div class="container">
+  
+
+    <style>
+        .update {
+            color: #333;
+            margin-right: 5px;
+        }
+        .remove {
+            color: red;
+            margin-left: 5px;
+        }
+        .alert {
+            padding: 0 14px;
+            margin-bottom: 0;
+            display: inline-block;
+        }
+    </style>
+    
+    <br/><br/><br/>
+    <div class="row">
+        <div class="col-lg-12">
+            <ol class="breadcrumb"></ol>
+        </div>
+    </div>
+    <ul class="pager">
+        <li class="previous"><a class="pre1" href="javascript:" title="Indietro"><i class="glyphicon glyphicon-backward"></i></a></li>
+        <li class="next"><a class="next1" href="javascript:" title="Avanti"><i class="glyphicon glyphicon-forward"></i></a></li>
+    </ul>
+    <div class="panel panel-default">
+        <div class="panel-heading" style="height: 100px">
+           
+            <label>Gestione RFA</label>  -  Servizio: 
+            <label id="lblServizio" ></label>  -  Numero richiesta: 
+            <label id="lblnum-prog" ></label> del 
+            <label id="lbldata" ></label> - Fornitore: 
+            <label id="lblfornitore" ></label> - Categoria: 
+            <label id="lblcategoria1" ></label> - Data consegna: 
+            <label id="lbltempistica" ></label>
+            <div class=" pull-right">
+            <button type="button" id="downExcel" name="downExcel" class="btn btn-primary col-sm  " >Download Ordine <span  class="fas fa-file-excel"></span></button>&nbsp;
+   
+           <button type="button" id="changeStato" name="changeStato" class="btn btn-primary col-sm " >Cambia <span id="lblstatus" class="badge  ">Stato</span></button>&nbsp;
+        </div>
+        </div>
+    </div> <!--div class="panel panel-default"-->
+    <form class="manageForm" id="manageForm" method="post">
+        <div class="panel-group" id="accordion0" role="tablist" aria-multiselectable="true">
+
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingOne0">
+                    <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion0" href="#collapseOne0" aria-expanded="false" aria-controls="collapseOne0">
+                            <!--i class="more-less glyphicon glyphicon-plus"></i-->
+                            Anagrafica Servizio  <label id="lblServizio" ></label>
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseOne0" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne0">
+                    <div class="panel-body">
+                        <input type="hidden" class="form-control" name="id" id="id">
+                        <div class="row">
+                            <div class="form-group col-lg-6">
+                                <label id="lblname" for="servizio">Nome Servizio</label>
+                                <select  id="servizio" name="servizio"  class="form-control " ></select>
+                            </div>
+                            
+                              <div class="form-group col-lg-3">
+                                <label  id="lblemailServizio" for="emailServizio">Email</label>
+                                <input type="text" class="form-control" name="emailServizio" id="emailServizio"  readonly>
+                            </div>
+                             <div class="form-group col-lg-3">
+                                <label  id="lbltelCoord" for="telServizio">Telefono</label>
+                                <input type="text" class="form-control" name="telServizio" id="telServizio"  readonly>
+                            </div>
+                            
+                         </div>
+                        <div class="row">
+                            <div class="form-group col-lg-5">
+                                <label for="categoriaServizio">Categoria Servizio</label>
+                                <input  type="text" name="categoriaServizio" id="categoriaServizio"  class="form-control" readonly>
+                            </div>
+                            
+                            <div class="form-group col-lg-2">
+                                <label for="areaServizio">Area Servizio</label>
+                                <input  type="text" name="areaServizio" id="areaServizio"  class="form-control" readonly>
+                            </div>
+                            <div class="form-group col-lg-3">
+                                <label for="orariServizio">Orari Servizio</label>
+                                <input type="text"  name="orariServizio" id="orariServizio"  class="form-control" readonly>
+                            </div>
+                            <div class="form-group col-lg-2">     
+                                <label for="tipoServizio">Tipologia Servizio</label>
+                                <input type="text"  name="tipoServizio" id="tipoServizio"  class="form-control" readonly>
+                            </div>
+                           
+                        </div> 
+                         <div class="row">
+                            <div class="form-group col-lg-8">
+                                <label  id="lblindirizzo" for="indirizzo">Indirizzo</label>
+                                <input type="text" class="form-control" name="indirizzo" id="indirizzo"  readonly>
+                            </div>
+                              <div class="form-group col-lg-1">
+                                <label  id="lblcap" for="cap">CAP</label>
+                                <input type="text" class="form-control" name="cap" id="cap"  readonly>
+                            </div>
+                             <div class="form-group col-lg-2">
+                                <label  id="lblcomune" for="comune">Comune</label>
+                                <input type="text" class="form-control" name="comune" id="comune"  readonly>
+                            </div>
+                            <div class="form-group col-lg-1">
+                                <label  id="lblprovincia" for="provincia">Prov.</label>
+                                <input type="text" class="form-control" name="provincia" id="provincia"  readonly>
+                            </div>
+                        </div> 
+                        <div class="row">
+                            <div class="form-group col-lg-8">
+                                <label  id="lblcoordinatore" for="coordinatore">Coordinatore</label>
+                                <input type="text" class="form-control" name="coordinatore" id="coordinatore"  readonly>
+                            </div>
+                              <div class="form-group col-lg-2">
+                                <label  id="lblemailCoord" for="emailCoord">Email</label>
+                                <input type="text" class="form-control" name="emailCoord" id="emailCoordv"  readonly>
+                            </div>
+                             <div class="form-group col-lg-2">
+                                <label  id="lbltelCoord" for="telCoord">Telefono</label>
+                                <input type="text" class="form-control" name="telCoord" id="telCoord"  readonly>
+                            </div>
+                           
+                        </div> 
+                        <div class="row">
+                            <div class="form-group col-lg-8">
+                                <label  id="lblrefRes" for="refRes">Ref/Res</label>
+                                <input type="text" class="form-control" name="refRes" id="refRes"  readonly>
+                            </div>
+                              <div class="form-group col-lg-2">
+                                <label  id="lblemailCoord" for="emailCoord">Email</label>
+                                <input type="text" class="form-control" name="emailRefRes" id="emailRefRes"  readonly>
+                            </div>
+                             <div class="form-group col-lg-2">
+                                <label  id="lbltelCoord" for="telCoord">Telefono</label>
+                                <input type="text" class="form-control" name="telRefRes" id="telRefRes"  readonly>
+                            </div>
+                           
+                        </div>  
+                    </div>
+                </div>
+            </div>
+        </div>      
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingOne">
+                    <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            <!--i class="more-less glyphicon glyphicon-plus"></i-->
+                            Dati Richiesta Fabbisogno Approvvigionamento
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body">
+                        <input type="hidden" class="form-control" name="id" id="id">
+                        <div class="row">
+
+                            <div class="form-group col-sm-2">
+                                <label id="lblname" for="name">Numero richiesta</label>
+                                <input type="text" class="form-control" name="num-prog" id="num-prog" readonly >
+                            </div>
+                            <div class="form-group col-sm-5">
+                                <label  id="lbloperatore" >Richiesta da:</label>
+                                <input type="text" class="form-control" name="operatore" id="operatore" readonly>
+                            </div>
+                            <div class="form-group col-sm-5">
+                                 <span class="alert1"></span>
+                                <label  id="lbldataConsegna" >Data consegna:</label>
+                                <div class="input-group date " id="datetimepicker1">
+                                  
+                                    <input type='text' class="form-control "  id="dataConsegna" name="dataConsegna" > 
+                                    <span class="input-group-addon">  
+                                        <span class="glyphicon glyphicon-calendar"></span> 
+                                    </span>
+                                </div>
+                            </div>
+                        </div>    
+                        <div class="row">
+                            <div class="form-group col-sm-12">
+                                <label id="lblname" for="nota">Note a richiesta ordine</label>
+
+                                 <textarea class="form-control" name="nota" id="nota" readonly  rows="1"></textarea>
+                            </div>
+                        </div>
+                        <div class="row">
+                              <div class="form-group col-sm-2">
+                                <label id="lblcig" for="cig">CIG</label>
+                                <input type="text" class="form-control" name="cig" id="cig" readonly >
+                            </div>
+                            <div class="form-group col-sm-5">
+                                <label  id="lblscadenzaCIG" >Scadenza CIG</label>
+                                <input type="text" class="form-control" name="scadenzaCIG" id="scadenzaCIG" readonly>
+                            </div>
+                           
+                            <div class="form-group col-sm-5">
+                                <label  id="lblnotaCIG" >Nota CIG</label>
+                                <input type="text" class="form-control" name="notaCIG" id="notaCIG" readonly>
+                            </div>
+                          
+                        </div>
+                        <div class="row">
+                              <div class="form-group col-sm-6">
+                                <label id="lbl1fornitore" for="fornitore">Fornitore</label>
+                                <input type="text" class="form-control" name="fornitore" id="fornitore" readonly >
+                            </div>
+                             <div class="form-group col-sm-6">
+                                <label id="lblcategoria" for="categoria">Categoria</label>
+                                <input type="text" class="form-control" name="categoria" id="categoria" readonly >
+                            </div>
+                         </div>
+                         <div class="row">
+                            <div class="form-group col-sm-4">
+                                <label  id="lblorario_consegna" for="orario_consegna" >Orario consegna</label>
+                                <input type="text" class="form-control" name="orario_consegna" id="orario_consegna" readonly>
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label  id="lblcodiceCliente" >Codice cliente</label>
+                                <input type="text" class="form-control" name="codice_cliente" id="codice_cliente" readonly>
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label  id="lblcodiceServizio" >Codice servizio</label>
+                                <input type="text" class="form-control" name="codice_servizio" id="codice_servizio" readonly>
+                            </div> 
+                          
+                        </div>
+                        <div class="row">
+                              <div class="form-group col-sm-3">
+                                <label id="lblordine_fornitore" for="ordine_fornitore">N° ordine fornitore</label>
+                                <input type="text" class="form-control" name="ordine_fornitore" id="ordine_fornitore" readonly >
+                            </div>
+                             <div class="form-group col-sm-3">
+                                <label id="lbldata_ordine_fornitore" for="data_ordine_fornitore">Data ordine fornitore</label>
+                                <input type="text" class="form-control" name="data_ordine_fornitore" id="data_ordine_fornitore" readonly >
+                            </div>
+                            <div class="form-group col-sm-3">
+                                <label  id="lblfattura_fornitore" for="fattura_fornitore" >N° fattura fornitore</label>
+                                <input type="text" class="form-control" name="fattura_fornitore" id="fattura_fornitore" readonly>
+                            </div>
+                           
+                            <div class="form-group col-sm-3">
+                                <label  id="lbldata_fattura_fornitore" for="data_fattura_fornitore">Data fattura fornitore</label>
+                                <input type="text" class="form-control" name="data_fattura_fornitore" id="data_fattura_fornitore" readonly>
+                            </div>
+                          
+                        </div>
+                   
+                    </div>
+                </div>
+            </div>
+        </div>        
+
+    
+    
+        <div class="panel-group" id="accordion2" role="tablist" aria-multiselectable="true">
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingUno">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapseUno" aria-expanded="false" aria-controls="collapseUno">
+                        
+                       <label id="lblInt-prog" ></label> Prodotti ordinati
+                    </a>
+                </h4>   
+            </div>
+            <div id="collapseUno" class="panel-collapse collapse.show" role="tabpanel" aria-labelledby="headingUno">
+                <div class="panel-body">
+                    <div class="toolbar">
+                        <div id="divProduct"></div>
+                        <span class="alert"></span>
+                    </div>
+                   
+                    <table id="table1"> </table>
+                    <div class="row ">
+                        <div class="form-group  col-sm-12"  >
+                            <br>
+                            <div class="form-group " id="sospesoDiv"></div>
+                           
+                        </div>
+                    </div> 
+                    <div class="row ">
+                        <div class="form-group  col-sm-12"  >
+                            <br>
+                            <div class="form-group " id="approvaDiv"></div>
+                           
+                        </div>
+                    </div> 
+                    <div class="row ">
+                        <div class="form-group  col-sm-12"  >
+                            <br>
+                            <div class="form-group " id="preventivoDiv"></div>
+                           
+                        </div>
+                    </div> 
+                </div>  <!--div class="panel-body"-->
+            </div>  <!--div class="panel-collapse collapse"-->
+        </div>  <!--div class="panel panel-default"-->
+    </div><!--div class="panel-group"-->
+    
+    <div class="panel-group" id="accordion3" role="tablist" aria-multiselectable="true">
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingTre">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion3" href="#collapseTre" aria-expanded="false" aria-controls="collapseUno">
+                        
+                       <label id="lblInt-ddt" ></label> 
+                    </a>
+                </h4>   
+            </div>
+            <div id="collapseTre" class="panel-collapse collapse.show" role="tabpanel" aria-labelledby="headingTre">
+                <div class="panel-body">
+                    <div class="toolbar">
+                        <div id="divDDT"></div>
+                        <span class="alert"></span>
+                    </div>
+                   
+                    <table id="tableDDT"> </table>
+                    <div class="row ">
+                        <div class="form-group  col-sm-12"  >
+                            <br>
+                            <div class="form-group " id="chiudiDiv">
+
+                            </div>
+                        </div>
+                    </div> 
+                </div>  <!--div class="panel-body"-->
+            </div>  <!--div class="panel-collapse collapse"-->
+        </div>  <!--div class="panel panel-default"-->
+    </div><!--div class="panel-group"-->
+     
+    <!--div class="panel-group" id="accordion1" role="tablist" aria-multiselectable="true">    
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingFour">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                       
+                        Chiudi / Respingi      Richiesta Fabbisogno Approvvigionamento
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                <div class="panel-body">
+                
+                    <div id="chiusura">
+                        <div class="row ">
+                            <div class="form-group col-sm-12">
+                                <label  id="ubicazione" >Descrizione</label>
+
+                                <textarea class="form-control" name="descr_chiusura" id="descr_chiusura"  rows="3"></textarea>
+
+                            </div>
+                        </div>
+                        <div class="row ">
+                            <div class="form-group  col-sm-12"  style="background-color: #f5f5f5">
+                                <label class="form-group col-sm-4" >Chiudi / Respingi      Richiesta Fabbisogno Approvvigionamento</label> 
+                                <div class="form-group col-sm-2" >
+                                    <button type="button" id="closeOK" name="closeOK" class="btn btn-success">Chiudi Richiesta</button>
+                               
+                                </div>
+                                <div class="form-group col-sm-2" >
+                                   <button type="button" id="closeKO" name="closeKO" class="btn btn-danger">Richiesta  Respinta</button>
+                           
+                                </div>
+                                <div class="form-group col-sm-2" >
+                                   <button type="button" id="closeSBY" name="closeSBY" class="btn btn-warning">Richiesta Sospesa</button>
+                           
+                                </div>
+                            </div>
+                        </div>   
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div--><!-- panel-group -->
+    </form>
+     <ul class="pager">
+        <li class="previous"><a class="pre1" href="javascript:" title="Indietro"><i class="glyphicon glyphicon-backward"></i></a></li>
+        <li class="next"><a class="next1" href="javascript:" title="Avanti"><i class="glyphicon glyphicon-forward"></i></a></li>
+    </ul>
+
+    <div id="modal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title"></h4>
+                </div>
+                <div class="modal-body">
+                     <form role="form" id="newModalForm" name="newModalForm" enctype="multipart/form-data">
+                        <input type="hidden" class="form-control" name="id" > 
+                        <div class="form-group">
+                           <label>Nome</label>
+                           <input type="text" class="form-control" name="name" id="name" placeholder="Nome" >
+                        </div>
+                        <div class="form-group">
+                            <label  id="lbldescription" for="description">Comune</label>
+                            <input type="text" class="form-control" name="description" id="description" placeholder="Comune">
+                        </div>
+                        <div class="form-group">
+                            <label id="lblshortDescription" for="shortDescription">Cartella</label>
+                            <input type="text" class="form-control" name="shortDescription" id="shortDescription" placeholder="Nome Cartella">
+                        </div>
+
+                        <div class="input_fields_wrap"> 
+                        </div>    
+
+                        <div class="form-group">
+                          <label>Valido</label>
+                          <input type="checkbox" class="form-control" name="valid" placeholder="Valido" value="">
+                        </div>
+                         <!--button type="button" class="btn btn-primary submit">Submit</button>
+                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button-->
+                     </form>
+                </div><!-- /.modal-body -->
+                <div class="modal-footer">
+                    <button type="submit"  class="btn btn-primary submit">Submit</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> 
+                   
+                </div>
+                
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+</div><!-- content -->

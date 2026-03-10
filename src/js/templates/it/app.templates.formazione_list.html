@@ -1,0 +1,101 @@
+<div class="container-fluid">
+  
+
+    <style>
+        .update {
+            color: #333;
+            margin-right: 5px;
+        }
+        .remove {
+            color: red;
+            margin-left: 5px;
+        }
+        .remove.btn-danger {
+            color: #333;
+            margin-left: 5px;
+        }
+        .remove.btn-danger:hover {
+            color: white;
+           
+        }
+        
+        .alert {
+            padding: 0 14px;
+            margin-bottom: 0;
+            display: inline-block;
+        }
+    </style>
+    <br><br><br>
+    <div class="row">
+        <div class="col-lg-12">
+            <ol class="breadcrumb"></ol>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">FORMAZIONE</div>
+        <div class="panel-body">
+          <button class="btn btn-default" type="button" name="gestio_video" id="gestio_video" aria-label="Gestione Video" title="Gestione Video">Gestione Video</button>
+           <button class="btn btn-default" type="button" name="gestio_utenti" id="gestio_utenti" aria-label="Gestione Utenti" title="Gestione Utenti">Gestione Utenti</button>
+        </div>  <!--div class="panel-body"-->
+    </div>  <!--div class="panel panel-default"-->
+    <div class="panel panel-default">
+        <div class="panel-heading" id="pannello"></div>
+       
+        <div class="panel-body">
+            <div class="toolbar col-lg-10"></div> 
+            <div class="form-group col-lg-2 pull-right">
+                <button  title="Excel" type="button" class="btn btn-default " id="excel" name="excel" >
+                    <img src="./css/img/excel.png" width="20px">
+                </button>
+            </div>
+            <div class="form-group col-lg-12">
+                <table id="table"></table>
+            </div>
+        </div>  <!--div class="panel-body"-->
+    </div>  <!--div class="panel panel-default"-->        
+
+    <div id="modal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title"></h4>
+                </div>
+                <div class="modal-body">
+                     <form role="form" id="newModalForm" name="newModalForm" enctype="multipart/form-data">
+                        <input type="hidden" class="form-control" name="id"> 
+                        <div class="form-group">
+                           <label>Nome</label>
+                           <input type="text" class="form-control" name="name" id="name" placeholder="Nome">
+                        </div>
+                        <div class="form-group">
+                            <label id="lbldescription" for="description">Comune</label>
+                            <input type="text" class="form-control" name="description" id="description" placeholder="Comune">
+                        </div>
+                        <div class="form-group">
+                            <label id="lblshortDescription" for="shortDescription">Cartella</label>
+                            <input type="text" class="form-control" name="shortDescription" id="shortDescription" placeholder="Nome Cartella">
+                        </div>
+
+                        <div class="input_fields_wrap"> 
+                        </div>    
+
+                        <div class="form-group">
+                          <label>Valido</label>
+                          <input type="checkbox" class="form-control" name="valid" placeholder="Valido" value="">
+                        </div>
+                         <!--button type="button" class="btn btn-primary submit">Submit</button>
+                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button-->
+                     </form>
+                </div><!-- /.modal-body -->
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary submit">Submit</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> 
+                   
+                </div>
+                
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+ </div>

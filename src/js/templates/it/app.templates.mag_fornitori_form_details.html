@@ -1,0 +1,52 @@
+ 
+      <input type="hidden" class="form-control" name="id_fornitore" id="id_fornitore">
+      <div class="row"><div class="form-group col-sm-6">
+        <label >Fornitore Magazzino*</label>
+        <input type="text"   class="form-control" name="name" id="name" value="" placeholder="Nome" />
+    </div></div>        
+    <div class="row">
+        <div class="form-group col-sm-4">
+           <label for="name">CCIA </label>
+           <input type="text"   class="form-control" name="ccia" id="ccia" value="" placeholder="CCIA" />
+        </div>
+        <div class="form-group col-sm-4">
+           <label for="piva">P.IVA </label>
+           <input type="text"   class="form-control" name="piva" id="piva" value=""   placeholder="P.IVA" />
+        </div>
+        <div class="form-group col-sm-4">
+            <label for="codice_fiscale">Indirizzo </label>
+            <input type="text"   class="form-control" name="indirizzo" id="indirizzo"    placeholder="Indirizzo" />
+        </div>
+
+    </div> 
+    <div class="row">
+        <div class="form-group col-sm-6">
+            <label >Categoria</label>
+            <select  class="form-control" name="categoria" id="categoria" >
+                <option value="0">Seleziona Categoria</option>
+            </select>
+        </div>
+   
+        <div class="form-group col-sm-6">
+            <label >Sotto Categoria</label>
+            <select  class="form-control" name="sub_categoria" id="sub_categoria" >
+                <option value="0">Seleziona Sotto Categoria</option>
+            </select>
+        </div>
+    </div>  
+                     
+    <br> 
+    <div class="md-form">
+        <label for="note">Note</label>
+        <textarea  id="note" name="note" class="md-textarea form-control" rows="3"></textarea>
+    </div>
+    <br>
+    <label >    * Campi obbligatori</label>
+    <span class="alert1"></span>
+    <br>
+    <br>
+    <button type="submit"  class="btn btn-info  btn-block btn-large" id="invio"  name="invio"  value="Invio" >Invio</button>
+    
+
+
+

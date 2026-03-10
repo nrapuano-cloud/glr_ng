@@ -1,0 +1,62 @@
+<h3 style="text-align: center;color:black;font-weight:bold;border:2px solid #a1a1a1;">SCHEDE DI OSSERVAZIONE </h3><br>
+ 
+
+     
+    
+        <div class="panel panel-default">
+        <!--div class="panel-heading"></div-->
+            <div class="panel-body">
+                <div id="boot"></div>
+                 <div  id="tipi"></div>
+                 <p class="toolbar">
+                    <span class="alert"></span>
+               </p>
+              <table id="table_so" class="table-striped def"></table>
+                
+            </div>  <!--div class="panel-body"-->
+        </div>  <!--div class="panel panel-default"-->
+        
+    
+        <div id="modal_os" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title"></h4>
+                    </div>
+                    <div class="modal-body">
+                         <form role="form" id="newModalForm" name="newModalForm" enctype="multipart/form-data">
+                            <input type="hidden" class="form-control" name="id" > 
+                            <div class="form-group">
+                               <label>Nome</label>
+                               <input type="text" class="form-control" name="name" id="name" placeholder="Nome" >
+                            </div>
+                            <div class="form-group">
+                                <label  id="lbldescription" for="description">Comune</label>
+                                <input type="text" class="form-control" name="description" id="description" placeholder="Comune">
+                            </div>
+                            <div class="form-group">
+                                <label id="lblshortDescription" for="shortDescription">Cartella</label>
+                                <input type="text" class="form-control" name="shortDescription" id="shortDescription" placeholder="Nome Cartella">
+                            </div>
+    
+                            <div class="input_fields_wrap"> 
+                            </div>    
+    
+                            <div class="form-group">
+                              <label>Valido</label>
+                              <input type="checkbox" class="form-control" name="valid" placeholder="Valido" value="">
+                            </div>
+                             <!--button type="button" class="btn btn-primary submit">Submit</button>
+                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button-->
+                         </form>
+                    </div><!-- /.modal-body -->
+                    <div class="modal-footer">
+                       
+                       
+                    </div>
+                    
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+     </div><!-- content -->      

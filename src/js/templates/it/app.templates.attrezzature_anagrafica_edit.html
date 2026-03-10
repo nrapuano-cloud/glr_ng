@@ -1,0 +1,180 @@
+
+<div id="step10">
+    <div class="row">
+        
+        <div class="form-group col-sm-6">
+            <label >Fornitore</label>
+            <input type="text"   class="form-control" name="fornitore" id="fornitore"    placeholder="Fornitore"/>
+           
+        </div>
+        <div class="form-group col-sm-3">
+            <label >MAG / RFA / RMA</label>
+            <input type="text"   class="form-control" name="tipo_fornitore" id="tipo_fornitore" value="" placeholder="MAG / RFA / RMA" />
+         </div>
+       
+        <div class="form-group col-sm-3">
+            <label >Codice Articolo Fornitore </label>
+            <input type="text"   class="form-control" name="codice_fornitore" id="codice_fornitore" value="" placeholder="Codice Articolo Fornitore" readonly/>
+         </div>
+         <div class="form-group col-sm-1">
+            <label >ID</label>
+            <input type="text"   class="form-control" name="id" id="id" value="" readonly />
+         </div>
+         <div class="form-group col-sm-2">
+            <label >Codice Articolo Assegnato </label>
+            <input type="text"   class="form-control" name="codice_assegnato" id="codice_assegnato" value="" placeholder="Codice Articolo Assegnato" />
+         </div>
+        <div class="form-group col-sm-9">
+           <label >Descrizione </label>
+           <input type="text"   class="form-control" name="descrizione" id="descrizione"    placeholder="Descrizione Articolo" readonly/>
+       </div>
+      
+</div>
+<div id="step11">
+    <div id="campi_comuni">
+        <div class="row"> 
+            <div class="form-group col-sm-4">
+                <label >Data Acquisto</label>
+            <div class="input-group date " id="datetimepicker1"  >
+                    <input type='text' class="form-control "  id="data_acquisto" name="data_acquisto" readonly/> 
+                    <span class="input-group-addon">  
+                        <span class="glyphicon glyphicon-calendar"></span> 
+                    </span>
+                </div>
+            </div>
+            <div class="form-group col-sm-4">
+                <label >Numero Fattura</label>
+                <input type='text' class="form-control "  id="numero_fattura" name="numero_fattura" readonly/> 
+            </div>
+            <div class="form-group col-sm-4">
+                <label >Data Fattura</label>
+            <div class="input-group date " id="datetimepicker1a">
+                    <input type='text' class="form-control "  id="data_fattura" name="data_fattura" readonly/> 
+                    <span class="input-group-addon">  
+                        <span class="glyphicon glyphicon-calendar"></span> 
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="row"> 
+            <div class="form-group col-sm-4">
+                <label >Data Fine Garanzia</label>
+            <div class="input-group date " id="datetimepicker1b">
+                    <input type='text' class="form-control "  id="data_fine_garanzia" name="data_fine_garanzia" readonly/> 
+                    <span class="input-group-addon">  
+                        <span class="glyphicon glyphicon-calendar"></span> 
+                    </span>
+                </div>
+            </div>
+            <div class="form-group col-sm-4">
+                <label >Marca</label>
+                <input type='text' class="form-control "  id="marca" name="marca" readonly/> 
+            </div>
+            <div class="form-group col-sm-4">
+                <label >Modello</label>
+                <input type='text' class="form-control "  id="modello" name="modello" readonly/> 
+            </div>
+            
+        </div>
+        <div class="row"> 
+            <div class="form-group col-sm-4">
+                <label >Numero Seriale</label>
+                <input type='text' class="form-control "  id="numero_seriale" name="numero_seriale" readonly/> 
+            </div>
+            <!--div class="form-group col-sm-4">
+                <label >IMEI</label>
+                <input type='text' class="form-control "  id="imei" name="imei" /> 
+            </!--div>
+            <div-- class="form-group col-sm-4">
+                <label >Numero telefono</label>
+                <input type='text' class="form-control "  id="numero_telefono" name="numero_telefono" /> 
+            </div-->
+            
+        </div>
+    </div>  
+    <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Campi specifici</h3>
+        </div>
+        <div class="panel-body">  
+    <div id="campi_specifici">
+    <!--div class="row"> 
+        <div class="form-group col-sm-4">
+            <label >SO</label>
+            <input type='text' class="form-control "  id="so" name="so" /> 
+        </div>
+        <div class="form-group col-sm-4">
+            <label >HDD/SSD</label>
+            <input type='text' class="form-control "  id="hdd_sdd" name="hdd_sdd" /> 
+        </div>
+        <div class="form-group col-sm-4">
+            <label >Processore</label>
+            <input type='text' class="form-control "  id="processore" name="processore" /> 
+        </div>
+        <div class="form-group col-sm-4">
+            <label >RAM</label>
+            <input type='text' class="form-control "  id="ram" name="ram" /> 
+        </div>
+        
+    </div-->
+</div>
+</div>   
+    </div> 
+    <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Assegnazioni <span class="badge" id="badge_ass"></span></h3>
+        </div>
+        <div class="panel-body">
+            <div class="form-group col-sm-2">
+                <button type="button"  class="btn btn-services-blue  scrool wow fadeIn btn-block btn-large ass"  id="assegnazione"  name="assegnazione"   >Nuova assegnazione</button>
+            </div>  
+            <div class="form-group col-sm-12">
+                <table id="table_ass" class="table table-striped"
+                    data-show-refresh="false"
+                    data-show-columns="true"
+                    data-search="true"
+                    data-cache="false"
+                    data-pagination="true" >
+                </table>
+            </div>
+           
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Allegati <span class="badge" id="badge_all"></span></h3>
+           
+        </div>
+        <div class="panel-body">
+           
+               
+                  <div class="form-group col-sm-2">
+                  
+                    <!--button type="button"  class="btn btn-services-blue  scrool wow fadeIn btn-block btn-large all"  id="nuovo_allegato"  name="nuovo_allegato"   >Nuovo allegato</button-->
+                </div>      
+                <div class="form-group col-sm-12">
+                    <table id="table_all" class="table table-striped"
+                    data-show-refresh="false"
+                    data-show-columns="true"
+                    data-search="true"
+                    data-cache="false"
+                    data-pagination="true" >
+                </table>
+                 </div>
+            
+        </div>
+      </div>  
+        
+    <br> 
+    <div class="md-form">
+        <label for="note">Note</label>
+        <textarea  id="note_bsa" name="note_bsa" class="md-textarea form-control" rows="3"></textarea>
+    </div>
+    <br>
+    <label >    * Campi obbligatori</label>
+    <span class="alert1"></span>
+    <br>
+    <br>
+    <button type="button"  class="btn btn-services-blue  scrool wow fadeIn btn-block btn-large"  id="invio_articolo"  name="invio_articolo"  value="Invio" >Invio</button>
+    </div>
+</div>

@@ -1,0 +1,214 @@
+<div class="container-fluid">
+  
+
+    <style>
+        .update {
+            color: #333;
+            margin-right: 5px;
+        }
+        .remove {
+            color: red;
+            margin-left: 5px;
+        }
+        .alert {
+            padding: 0 14px;
+            margin-bottom: 0;
+            display: inline-block;
+        }
+    </style>
+    
+    <br/><br/><br/>
+    <div class="row">
+        <div class="col-lg-12">
+            <ol class="breadcrumb"></ol>
+        </div>
+    </div>
+    <ul class="pager">
+        <li class="previous"><a class="pre1" href="javascript:" title="Indietro"><i class="glyphicon glyphicon-backward"></i></a></li>
+        <li class="next"><a class="next1" href="javascript:" title="Avanti"><i class="glyphicon glyphicon-forward"></i></a></li>
+    </ul>
+    <div class="panel panel-default">
+        <div class="panel-heading"><label>Gestione RMA</label>  -  Servizio: <label id="lblServizio" ></label>  -  Numero richiesta: <label id="lblnum-prog" ></label> del <label id="lbldata" ></label> - Categoria: <label id="lblcategoria" ></label> - Tempistica: <label id="lbltempistica" ></label><span id="lblstatus" class="badge col-sm-1 pull-right">Stato</span>
+        </div>
+    </div> <!--div class="panel panel-default"-->
+    <form class="manageForm" id="manageForm" method="post">
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingOne">
+                    <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <!--i class="more-less glyphicon glyphicon-plus"></i-->
+                            Dati Richiesta Manutenzione
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body">
+                        <input type="hidden" class="form-control" name="id" id="id">
+                        <div class="row">
+
+                            <div class="form-group col-sm-4">
+                                <label id="lblname" for="name">Servizio</label>
+                                <select  id="servizio" name="servizio"  class="form-control " ></select>
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label  id="operatore" >Operatore</label>
+                                <input type="text" class="form-control" name="operatore" id="operatore" readonly>
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label >Categoria</label>
+                                <select  id="categoria" name="categoria"  class="form-control " ></select>
+                             </div>
+                            
+                           
+                        </div>
+                        <div id="attrezzature"></div>
+                        <div class="row">
+
+                            <div class="form-group col-sm-6">
+                                <label id="lblname" for="descrizione">Descrizione</label>
+
+                                 <textarea class="form-control" name="descrizione" id="descrizione" readonly  rows="3"></textarea>
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label  id="ubicazione" >Ubicazione</label>
+
+                                <textarea class="form-control" name="ubicazione" id="ubicazione" readonly rows="3"></textarea>
+
+                            </div>
+                            <div class="form-group col-sm-12">
+                                <label  id="ubicazione" >Note</label>
+
+                                <textarea class="form-control" name="note" id="note" readonly rows="3"></textarea>
+
+                            </div>
+                          
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-lg-12">     
+                                <label for="ar">Immagine</label>
+                                <div id="immagini"></div>
+                            </div> 
+                        </div> 
+                        <button type="button"  class="btn btn-primary btn-block btn-large" id="updateP1" >Update panel</button>
+            
+                    </div>
+                </div>
+            </div>
+        </div>        
+
+    
+    
+        <div class="panel-group" id="accordion2" role="tablist" aria-multiselectable="true">
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingUno">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapseUno" aria-expanded="false" aria-controls="collapseUno">
+                        
+                       <label id="lblInt-prog" ></label> Interventi Programmati
+                    </a>
+                </h4>   
+            </div>
+            <div id="collapseUno" class="panel-collapse collapse.show" role="tabpanel" aria-labelledby="headingUno">
+                <div class="panel-body">
+                    <p class="toolbar">
+                        <a class="create btn btn-default" href="javascript:">Nuovo Intervento</a>
+                        <span class="alert"></span>
+                    </p>
+                    <table id="table1"> </table>
+                </div>  <!--div class="panel-body"-->
+            </div>  <!--div class="panel-collapse collapse"-->
+        </div>  <!--div class="panel panel-default"-->
+    </div><!--div class="panel-group"-->
+     
+        <div class="panel-group" id="accordion1" role="tablist" aria-multiselectable="true">    
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingFour">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        <!--i class="more-less glyphicon glyphicon-plus"></i-->
+                        Chiudi / Respingi / Sospendi     Richiesta Manutenzione
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseFour" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingFour">
+                <div class="panel-body">
+                
+                    <div id="chiusura">
+                        <div class="row ">
+                            <div class="form-group col-sm-12">
+                                <label  id="ubicazione" >Descrizione</label>
+
+                                <textarea class="form-control" name="descr_chiusura" id="descr_chiusura"  rows="3"></textarea>
+
+                            </div>
+                        </div>
+                        <div class="row ">
+                            <div class="form-group  col-sm-12"  style="background-color: #f5f5f5">
+                                <label class="form-group col-sm-4" >Chiudi / Respingi / Sospendi     richiesta manutenzione</label> 
+                                <div class="form-group col-sm-2" >
+                                    <button type="button" id="closeOK" name="closeOK" class="btn btn-success">Chiudi Richiesta</button>
+                               
+                                </div>
+                                <div class="form-group col-sm-2" >
+                                   <button type="button" id="closeKO" name="closeKO" class="btn btn-danger">Richiesta  Respinta</button>
+                           
+                                </div>
+                                <div class="form-group col-sm-2" >
+                                   <button type="button" id="closeSBY" name="closeSBY" class="btn btn-warning">Richiesta Sospesa</button>
+                           
+                                </div>
+                            </div>
+                        </div>   
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- panel-group -->
+    </form>
+
+    <div id="modal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title"></h4>
+                </div>
+                <div class="modal-body">
+                     <form role="form" id="newModalForm" name="newModalForm" enctype="multipart/form-data">
+                        <input type="hidden" class="form-control" name="id" > 
+                        <div class="form-group">
+                           <label>Nome</label>
+                           <input type="text" class="form-control" name="name" id="name" placeholder="Nome" >
+                        </div>
+                        <div class="form-group">
+                            <label  id="lbldescription" for="description">Comune</label>
+                            <input type="text" class="form-control" name="description" id="description" placeholder="Comune">
+                        </div>
+                        <div class="form-group">
+                            <label id="lblshortDescription" for="shortDescription">Cartella</label>
+                            <input type="text" class="form-control" name="shortDescription" id="shortDescription" placeholder="Nome Cartella">
+                        </div>
+
+                        <div class="input_fields_wrap"> 
+                        </div>    
+
+                        <div class="form-group">
+                          <label>Valido</label>
+                          <input type="checkbox" class="form-control" name="valid" placeholder="Valido" value="">
+                        </div>
+                         <!--button type="button" class="btn btn-primary submit">Submit</button>
+                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button-->
+                     </form>
+                </div><!-- /.modal-body -->
+                <div class="modal-footer">
+                    <button type="submit"  class="btn btn-primary submit">Submit</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> 
+                   
+                </div>
+                
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+</div><!-- content -->

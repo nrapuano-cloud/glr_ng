@@ -1,0 +1,8 @@
+CACHE MANIFEST
+# rev 1 - 2019-05-16T12:14:45.842Z
+
+NETWORK:
+*
+
+FALLBACK:
+/ /offline.html

@@ -1,0 +1,12 @@
+app.models.tipoGap=Backbone.Model.extend({
+	initialize:function(){
+		console.log("initializing tipoGap model")},
+	
+	sync:function(e,t,n){
+		n=n||{};
+		n.crossDomain=true;if(n.private){
+		var r={"X-Requested-With":"XMLHttpRequest",
+		authkey:app.global.tokensCollection.first().get("auth").authkey,
+		username:app.global.tokensCollection.first().get("username")};
+		n.headers=r}else{var r={"X-Requested-With":"XMLHttpRequest"};
+		n.headers=r}Backbone.sync(e,t,n)}})

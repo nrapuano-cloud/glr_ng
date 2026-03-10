@@ -1,0 +1,180 @@
+<h3 style="text-align: center;color:black;font-weight:bold;border:2px solid #a1a1a1;">PROGETTO INDIVIDUALE</h3><!--button class="btn pull-right" href="undefined.pdf" title="Export to PDF" type="button"  id="expPDF_pi" download=""> <img src="./css/img/pdf.svg" width="50px"></!--button--><br>
+<br/><br/><br/>
+<form  id="editprogetto" method="post" enctype="multipart/form-data">
+    <div class="messages"></div>
+    <input type="hidden" class="form-control" name="id_pi" id="id_pi">
+   
+    <input type="hidden" class="form-control" name="id_person" id="id_person">
+    <input type="hidden" class="form-control" name="id_anagrafica" id="id_anagrafica">
+    <div class="panel panel-default">
+        <div class="panel-heading" >
+            <h4 class="panel-title">
+                    <label ></label>
+             </h4>
+        </div>
+       <div class="panel-body">
+            <div class="row"> 
+                <div class="form-group col-sm-6">
+                    <label >Data inserimento in struttura</label>
+                    <input type='text' class="form-control "  id="data_inserimento" name="data_inserimento" readonly/> 
+                </div>
+                <div class="form-group col-sm-6">
+                    <label >Data apertura progetto</label>
+                   <div class="input-group date " id="datetimepicker1">
+                        <input type='text' class="form-control "  id="data_apertura" name="data_apertura" /> 
+                        <span class="input-group-addon">  
+                            <span class="glyphicon glyphicon-calendar"></span> 
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group col-sm-6">
+                    <label >Tipologia di progetto</label>
+                
+                    <select class="form-control "  id="tipo_progetto" name="tipo_progetto"></select> 
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading" >
+            <h4 class="panel-title">
+                    <label ></label>
+             </h4>
+        </div>
+       <div class="panel-body">
+    <div class="row"> 
+        <div class="form-group col-sm-12">
+            <label >Formazione dell'equipe multidisciplinare</label>
+         
+            <p class="toolbar_equipe">
+                <span class="alert"></span>
+           </p>
+          <table id="table_equipe" class="table-striped def"></table>
+               
+            </div>
+        </div>
+        
+      
+    </div>
+</div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading" >
+        <h4 class="panel-title">
+                <label ></label>
+         </h4>
+    </div>
+   <div class="panel-body">
+    <div class="row"> 
+        <div class="form-group col-sm-12">
+            <label >Problemi rilevati</label>
+         
+                <textarea class="form-control" rows="3" name="problemi" id="problemi"></textarea>
+          
+               
+            </div>
+        </div>
+        
+      
+    </div>
+</div>
+</div>
+    <div class="panel panel-default">
+        <div class="panel-heading" >
+            <h4 class="panel-title">
+                <label >OBIETTIVI</label>
+             </h4>
+        </div>
+       <div class="panel-body">
+    <div class="row"> 
+        <div class="form-group col-sm-12">
+           
+         
+            <p class="toolbar_obiettivo">
+                <span class="alert"></span>
+           </p>
+          <table id="table_obiettivo" class="table-striped def"></table>
+           
+        </div>
+        
+      
+    </div>
+</div>
+</div>
+    <div class="panel panel-default">
+        <div class="panel-heading" >
+            <h4 class="panel-title">
+                    <label >DIMISSIONI</label>
+             </h4>
+        </div>
+       <div class="panel-body">
+    <div class="row"> 
+        <div class="form-group col-sm-12">
+            <label >Motivo:</label>
+         
+            <textarea class="form-control" rows="3" name="dim_motivo" id="dim_motivo"></textarea>
+               
+          
+        </div>
+        <div class="form-group col-sm-6">
+            <label >Data dimissioni (vedi anagrafica)</label>
+          
+                <input type='text' class="form-control "  id="data_dimissioni" name="data_dimissioni" readonly/> 
+               
+            </div>
+        </div>
+      
+    </div>
+    
+</div>
+</div>                
+    <br> 
+    <div class="md-form">
+        <label for="note">Note</label>
+        <textarea  id="note" name="note" class="md-textarea form-control" rows="3"></textarea>
+    </div>
+    <br>
+    <label >    * Campi obbligatori</label>
+    <span class="alert1"></span>
+    <br>
+    <br>
+    <button type="submit"  class="btn btn-info  btn-block btn-large" id="pi_invio"  value="Invio" disabled>Invio</button>
+
+
+</form>
+
+<div id="err"></div>
+       
+    <!-- Modal -->
+    <div id="modal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                 
+                    <h4 class="modal-title"></h4>
+                    <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-hidden="true"
+                  >
+                    ×
+                  </button>
+                </div>
+                
+                  
+                   
+               
+                <div class="modal-body">
+                     <h3 id="myModalLabel"></h3>
+                   <textarea class="form-control" name="descriz" id="descriz" readonly rows="3"></textarea>
+                   <img   class="img-fluid" id="image"> 
+                </div>
+                <div class="modal-footer">
+                
+                  
+                </div>
+            </div>
+        </div>
+    </div>    
+    

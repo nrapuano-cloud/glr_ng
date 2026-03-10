@@ -1,0 +1,14 @@
+{
+    "type": "rfa_management",
+    "lang" : "it",
+    "new" : "Nuovo",
+    "error_message" : "Si è verificato un errore",
+    "error_message1" : "Si è verificato un graaande errore",
+    
+    "header_rma_intervento_message":"Nuovo intervento",
+    "body_message":"Nuovo intervento assegnato correttamente!",
+    "header_rma_intervento_del_message":"Rimozione  Intervento",
+    "body_del_message":"Intervento rimosso correttamente!",
+    "header_rma_chiusura_message":"Chiusura Richiesta Manutenzione",
+    "body_chiusura_message":"Chiusura Richiesta Manutenzione eseguita correttamente!"
+}

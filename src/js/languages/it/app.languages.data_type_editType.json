@@ -1,0 +1,65 @@
+{
+    "type": "data_type_editType",
+    "lang" : "it",
+ 	"hr" : "HR",
+ 	"divData":"Dati Personali",
+    
+        "header_registration_message":"Modifica Personale!",
+ 	"body_registration_message":"Modifica effettuata con successo!",
+            "titolo":"Titolo",
+ 	"last_name":"Cognome",
+ 	"middlename":"MN",	
+ 	"first_name":"Nome",
+ 	"active_check":"Active",
+ 	"personIdent":"personIdent",
+ 	"basicData_identCard":"Carta Ident.",
+ 	"hrPersonType":"MA Typ",
+ 	"personRoleType":"PersonRole",
+ 	"fixed":"Mensile-Fisso",
+ 	"divBasicData": "BasicData",
+   
+ 	"flag_vvl":"VVL?",
+ 	"basicData_valueVvl":"valueVvl",
+ 	"flag_retirement":"retirement?",
+ 	"basicData_valueRetirement": "valueRetirement",
+ 	"basicData_zoneWorking": "zoneWorking",
+ 	"basicData_year": "Anno",
+ 	"basicData_tour": "Tour",
+ 	"setour" : "setour",
+ 	"address":"Indirizzo",
+ 	"address_street":"Via",
+ 	"address_houseNr":"Nr",
+ 	"address_zipCode":"CAP",
+ 	"address_city":"Città",
+ 	"reachabilityList":"Reperibilità",
+ 	"reachability_reachabilityType":"Tipo",
+ 	"reachability_phoneLand":"phoneLand",
+ 	"reachability_phoneCity":"phoneCity",
+ 	"reachability_phoneNumber":"phoneNumber",
+ 	"reachability_mailAddress":"mailAddress",
+ 	"reachability_internetAddress":"internetAddress",
+ 	"dress":"Abbigliamento",
+ 	"new":"Nuovo",
+ 	"tdress":"Abito",
+ 	"tsize":"Taglia",
+ 	"action":"Azione",
+ 	"personCloth":"Abito",
+ 	"close":"Chiudi",
+ 	"submit":"Invia",
+ 	"personSize":"Taglia",
+        "error_message" : "Si è verificato un errore",
+        "form_messages" :{
+            "codice_fiscale":
+                {
+                "required": "Dato richiesto",
+                "minlength": "Perfavore non meno di {0} caratteri sono necessari",
+                "maxlength": "Perfavore non più di {0} caratteri sono necessari",
+                "rangelength":"Perfavore inserisci {0} caratteri."
+                    
+                },
+            "first_name": "Inserire il Nome",
+            "last_name": "Inserire il Cognome",
+            "role":"Selezionare il Ruolo"
+            }
+ 	
+}

@@ -1,0 +1,132 @@
+<!-- Richiesta Nuova Manutenzione -->
+<div class="container-fluid">
+
+
+<style>
+        .update {
+            color: #333;
+            margin-right: 5px;
+        }
+        .remove {
+            color: red;
+            margin-left: 5px;
+        }
+        .alert {
+            padding: 0 14px;
+            margin-bottom: 0;
+            display: inline-block;
+        }
+  </style>
+
+  <div class="row">
+    <div class="col-lg-12">
+      <ol class="breadcrumb"></ol>
+    </div>
+  </div>
+  <P class="toolbar1">
+    <span class="alert"></span>
+  </p>
+ 
+    <div class="row">
+        <div class="col-lg-12">
+            <ol class="breadcrumb">
+              
+               
+            </ol>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <h3 class="lead">Nuova Richiesta Manutenzione </h3>
+             
+               
+                <br>
+            <form class="well" id="richiestaManutenzioneForm" method="post" enctype="multipart/form-data">
+           
+        <div class="messages"></div>
+       
+                
+                
+                <fieldset>
+                    
+                    <input type="hidden" id="id_person" name="id_person" >
+                   <div id="servizi"></div>
+                       
+                    <label for="categoria">Categoria *</label><select  id="categoria" name="categoria"  class="form-control" ></select><br>
+                   
+                     <br>
+                     <div id="attrezzature"></div> 
+                    <div class="md-form">
+                        <label for="descrizione">Descrizione *</label>
+                        <textarea  id="descrizione" name="descrizione" class="md-textarea form-control" rows="3" ></textarea>
+                      
+                    </div>
+                      <br>
+
+                    <div class="md-form">
+                      
+                        <label for="ubicazione">Ubicazione *</label>
+                        <textarea  id="ubicazione" name="ubicazione" class="md-textarea form-control" rows="3" maxlength="1000"></textarea>
+                     
+                    </div>
+                    <br>
+                   
+                      
+                    <div class="form-group">
+                        <label >Tempistica *   </label></br>
+                        
+                            <div class="radio-inline col-lg-3">
+                                <label><input type="radio" value="1" name="temp" id="temp" >Urgente</label>
+                            </div>
+                            <div class="radio-inline col-lg-3">
+                              <label><input type="radio" value="2" name="temp" id="temp" checked>Entro il </label>
+                            </div>
+                            
+                              
+                                <div class="input-group date col-lg-2" id="datetimepicker1">
+                                    <input type='text' class="form-control "  id="dataTemp" name="dataTemp"/> 
+                                    <span class="input-group-addon">  
+                                        <span class="glyphicon glyphicon-calendar"></span> 
+                                  </span>
+                               </div>
+                           
+                       
+                    </div>
+                      
+                       
+                      
+                     
+                    
+                      <br> 
+                    <div class="md-form">
+                     
+                        <label for="note">Note</label>
+                        <textarea  id="note" name="note" class="md-textarea form-control" rows="3"></textarea>
+                     
+                    </div>
+                     <br>
+                     <div class="form-group col-lg-12"  style="background-color: #ebebeb">
+                        <label  class="form-group col-lg-4">Seleziona documento da inviare(.jpg, .jpeg, .png, .pdf)</label>
+                        
+                         <input type="file" class="image-Plus" name="file[]" id="file" accept="image/jpeg,image/gif,image/png,application/pdf,application/msword,
+  application/vnd.openxmlformats-officedocument.wordprocessingml.document" multiple>
+                        </div>
+               
+                <div id="image" name="image"></div>
+                
+                   
+                    <br>
+                    <label >    * Campi obbligatori</label>
+                    <span class="alert1"></span>
+                    <br>
+                    <br>
+                    <button type="submit"  class="btn btn-info  btn-block btn-large" id="invio"  value="Invio">Invio</button>
+                </fieldset>
+         
+            </form>
+            <div class="progress"></div>
+            <div id="err"></div>
+        </div>
+    </div>
+</div>
+

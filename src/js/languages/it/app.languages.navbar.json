@@ -1,0 +1,51 @@
+{
+    "type": "navbar",
+    "lang" : "it",
+    
+    
+    
+    "link_root_data_type" : "Amm.Tecnica", 
+    "link_data_type" : "Amministrazione.Tecnica", 
+    "data_type" : "Amministrazione",    
+            
+    "link_root_hr" : "Personale",
+    "link_hr" : "Personale",
+    "hr" : "Personale",
+    "hr_sick" : "Festivi+Malattia",
+    "hr_mailTel" : "Mail-Tel",
+    "hr_address" : "Indirizzi",
+    "hr_car" : "Auto",
+    "hr_clotes" : "Abbigliamento",
+        
+    "link_root_docu_type":"Documenti",
+    "link_docu_type":"Documentazione",
+    
+    "link_root_planning" : "Archivio", 
+    "link_archive" : "Archivio", 
+    "link_rma" : "Richiesta Manutenzione Arcacoop", 
+    
+    "link_root_hr" : "Personale",
+    "hr" : "Personale",
+    "hr_sick" : "Festivi+Malattia",
+    "hr_mailTel" : "Mail-Tel",
+    "hr_address" : "Indirizzi",
+    "hr_car" : "Auto",
+    "hr_clotes" : "Abbigliamento",
+
+    
+    
+    
+    "car_data_type" : "Macchine",
+    
+    "addresses":"Indirizzi",
+    "car":"Auto",
+    
+    "archive" : "Archivio", 
+    "tel": "Tel-Mail",
+    
+    "planning" : "Planning"
+    
+    
+
+    
+}

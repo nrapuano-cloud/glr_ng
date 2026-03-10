@@ -1,0 +1,193 @@
+
+<div id="step10">
+        <div class="row">
+            <!--div class="form-group col-sm-2">
+            <label >Codice BSA *</label>
+            <input type="text"   class="form-control" name="matricola" id="matricola" value="" placeholder="Codice BSA" />
+            </div-->
+            <div class="form-group col-sm-12">
+                <label >Fornitore - (MAG / RFA / RMA) </label>
+                <select  class="form-control" name="fornitore" id="fornitore"  >
+                    <option value="0">Seleziona Fornitore</option>
+                </select>
+            
+            </div>
+            <div class="form-group col-sm-3">
+                <label >Codice Articolo Fornitore *</label>
+                <input type="text"   class="form-control" name="codice" id="codice" value="" placeholder="Codice Articolo Fornitore" />
+            </div>
+            <div class="form-group col-sm-9">
+            <label >Descrizione *</label>
+            <input type="text"   class="form-control" name="descrizione" id="descrizione"    placeholder="Descrizione Articolo" />
+        </div>
+        
+        </div>
+        <div id="step11">
+        <!--div class="panel panel-primary" id="cc">
+            <div class="panel-body">
+                <h3-- class="text-on-pannel text-primary"><strong > Campi comuni della categoria </strong></h3-->
+           
+                <div id="campi_comuni">
+                    <div class="row">
+                        <div class="form-group col-lg-8">  
+                            <div class="row"> 
+                                <div class="form-group col-sm-4">
+                                    <label >Data Acquisto</label>
+                                    <div class="input-group date " id="datetimepicker1">
+                                        <input type='text' class="form-control "  id="data_acquisto" name="data_acquisto" /> 
+                                        <span class="input-group-addon">  
+                                            <span class="glyphicon glyphicon-calendar"></span> 
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="form-group col-sm-4">
+                                    <label >Numero Fattura</label>
+                                    <input type='text' class="form-control "  id="numero_fattura" name="numero_fattura" /> 
+                                </div>
+                                <div class="form-group col-sm-4">
+                                    <label >Data Fattura</label>
+                                    <div class="input-group date " id="datetimepicker1a">
+                                        <input type='text' class="form-control "  id="data_fattura" name="data_fattura" /> 
+                                        <span class="input-group-addon">  
+                                            <span class="glyphicon glyphicon-calendar"></span> 
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row"> 
+                                <div class="form-group col-sm-6">
+                                    <label >Data Fine Garanzia</label>
+                                <div class="input-group date " id="datetimepicker1b">
+                                        <input type='text' class="form-control "  id="data_fine_garanzia" name="data_fine_garanzia" /> 
+                                        <span class="input-group-addon">  
+                                            <span class="glyphicon glyphicon-calendar"></span> 
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="form-group col-sm-6">
+                                    <label >Marca</label>
+                                    <input type='text' class="form-control "  id="marca" name="marca" /> 
+                                </div>
+                                
+                        
+                            </div>
+                            <div class="row">     
+                            <div class="form-group col-sm-12">
+                                <label >Modello</label>
+                                <input type='text' class="form-control "  id="modello" name="modello" /> 
+                            </div>
+                    
+                        </div>
+                           
+                            <div class="row"> 
+                                <div class="form-group col-sm-4">
+                                    <label >Numero Seriale</label>
+                                    <input type='text' class="form-control "  id="numero_seriale" name="numero_seriale" /> 
+                                </div>
+                                <!--div class="form-group col-sm-4">
+                                    <label >IMEI</label>
+                                    <input type='text' class="form-control "  id="imei" name="imei" /> 
+                                </!--div>
+                                <div-- class="form-group col-sm-4">
+                                    <label >Numero telefono</label>
+                                    <input type='text' class="form-control "  id="numero_telefono" name="numero_telefono" /> 
+                                </div-->
+                        
+                            </div>
+                        </div>
+                        <div class="form-group col-lg-4">
+                            <div class="row">
+                                <div class="form-group col-lg-12">
+                                    <label for="file">Seleziona immagine dell'articolo</label>
+                                    <input type="file" name="file" id="file" accept="image/*">
+                                    <p class="help-block"></p>
+                                </div>
+                                <div id="preview" class="form-group col-lg-12">
+                                    <img id="blah" src="">
+                                </div>
+                            </div>
+                        </div>  
+                    </div>
+                    <div class="row"> 
+                                <div class="form-group col-sm-4">
+                                    <label >Proprietà</label>
+                                    
+                                        <select  class="form-control "  id="proprieta" name="proprieta" >   
+                                            <option value=""></option>
+                                            <option value="ARCA">ARCA</option>
+                                            <option value="ENTE">ENTE</option>
+                                        </select> 
+                                </div>
+                                <div class="form-group col-sm-4">
+                                    <label >Codice BSA</label>
+                                    
+                                        <input type='text'  class="form-control "  id="codice_bsa"   name="codice_bsa" readonly /> 
+                                </div>
+                    </div>             
+                </div> 
+                <div id="movimento"></div>
+            <!--/div>
+        </div-->  
+        <div class="panel panel-default" id="cs">
+            <div class="panel-heading"><h3>Campi comuni della sotto categoria</h3></div>
+            <div class="panel-body">
+                <div id="campi_specifici">
+                <!--div class="row"> 
+                    <div class="form-group col-sm-4">
+                        <label >SO</label>
+                        <input type='text' class="form-control "  id="so" name="so" /> 
+                    </div>
+                    <div class="form-group col-sm-4">
+                        <label >HDD/SSD</label>
+                        <input type='text' class="form-control "  id="hdd_sdd" name="hdd_sdd" /> 
+                    </div>
+                    <div class="form-group col-sm-4">
+                        <label >Processore</label>
+                        <input type='text' class="form-control "  id="processore" name="processore" /> 
+                    </div>
+                    <div class="form-group col-sm-4">
+                        <label >RAM</label>
+                        <input type='text' class="form-control "  id="ram" name="ram" /> 
+                    </div>
+                    
+                </div-->   
+                </div> 
+            </div>
+        </div>
+        <div class="panel panel-default" id="p_all">
+            <div class="panel-heading">
+              <h3 class="panel-title">Allegati <span class="badge" id="badge_all"></span></h3>
+               
+            </div>
+            <div class="panel-body">
+               
+                   
+                      <div class="form-group col-sm-2">
+                      
+                        <button type="button"  class="btn btn-services-blue  scrool wow fadeIn btn-block btn-large all"  id="nuovo_allegato"  name="nuovo_allegato"   >Nuovo allegato</button>
+                    </div>      
+                    <div class="form-group col-sm-12">
+                        <table id="table_all" class="table table-striped"
+                        data-show-refresh="false"
+                        data-show-columns="true"
+                        data-search="true"
+                        data-cache="false"
+                        data-pagination="true" >
+                    </table>
+                     </div>
+                
+            </div>
+          </div>  
+        <br> 
+        <div class="md-form">
+            <label for="note">Note</label>
+            <textarea  id="note" name="note" class="md-textarea form-control" rows="3"></textarea>
+        </div>
+        <br>
+        <label >    * Campi obbligatori</label>
+        <span class="alert1"></span>
+        <br>
+        <br>
+        <button type="button"  class="btn btn-info  btn-block btn-large" id="invio_articolo"  name="invio_articolo"  value="Invio" >Invio</button>
+        </div>
+</div>

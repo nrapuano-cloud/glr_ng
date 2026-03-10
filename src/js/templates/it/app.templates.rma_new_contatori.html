@@ -1,0 +1,106 @@
+<!-- Inserimento nuova lettura contatori -->
+<div class="container-fluid">
+
+
+<style>
+        .update {
+            color: #333;
+            margin-right: 5px;
+        }
+        .remove {
+            color: red;
+            margin-left: 5px;
+        }
+        .alert {
+            padding: 0 14px;
+            margin-bottom: 0;
+            display: inline-block;
+        }
+  </style>
+
+  <div class="row">
+    <div class="col-lg-12">
+      <ol class="breadcrumb"></ol>
+    </div>
+  </div>
+  <P class="toolbar1">
+    <span class="alert"></span>
+  </p>
+ 
+    <div class="row">
+        <div class="col-lg-12">
+            <ol class="breadcrumb">
+              
+               
+            </ol>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <h3 class="lead">Nuova lettura contatori </h3>
+             
+               
+                <br>
+            <form class="well" id="letturaForm" method="post" enctype="multipart/form-data">
+           
+        <div class="messages"></div>
+       
+                
+                
+                <fieldset>
+                    
+                    <input type="hidden" id="id_person" name="id_person" >
+                    <input type="hidden" id="id_servizio" name="id_servizio" >
+                    <div id="servizi" class="form-group col-lg-12"></div>
+                    <div class="form-group col-lg-6">  
+                        <label >Utenza *</label>
+                        <select  id="utenza" name="utenza"  class="form-control" ></select>
+                    </div> 
+                    <div class="form-group col-lg-6">  
+                        <label >Fornitura *</label>
+                        <select  id="fornitura" name="fornitura"  class="form-control" ></select>
+                    </div> 
+                    <div class="form-group col-lg-6">  
+                        <label >Fornitore</label>
+                         <input type="text" class="form-control " id="fornitore" name="fornitore" readonly> 
+                    </div> 
+                    <div class="form-group col-lg-6">  
+                        <label >Competenza</label>
+                         <input type="text" class="form-control " id="competenza" name="competenza" readonly> 
+                    </div> 
+                  
+                    <div class="form-group col-lg-6">
+                        <label for="datetimepicker1">Data lettura *</label>
+                        <div class="input-group date pic1" id="datetimepicker1">
+
+                            <input type="text" class="form-control " id="dataLettura" name="dataLettura"> 
+                            <span class="input-group-addon">  
+                                <span class="glyphicon glyphicon-calendar"></span> 
+                            </span>
+                        </div> 
+                    </div>
+              
+                     <div id="formUtenza" ></div>
+                      <br> 
+                    <div class="form-group col-lg-12">
+                     
+                        <label for="note">Note</label>
+                        <textarea  id="note" name="note" class="md-textarea form-control" rows="3"></textarea>
+                     
+                    </div>
+                 
+                    <br>
+                    <label >    * Campi obbligatori</label>
+                    <span class="alert1"></span>
+                    <br>
+                    <br>
+                    <button type="submit"  class="btn btn-info  btn-block btn-large" id="invio"  value="Invio">Invio</button>
+                </fieldset>
+         
+            </form>
+            <div class="progress"></div>
+            <div id="err"></div>
+        </div>
+    </div>
+</div>
+

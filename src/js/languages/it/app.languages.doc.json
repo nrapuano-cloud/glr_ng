@@ -1,0 +1,29 @@
+{
+    "type": "doc",
+    "lang" : "it",
+    "label_button" : "chiudi",
+
+ "form_messages" : {
+        "name": {
+            "required": "Campo obbligatorio"
+           
+        },
+        "description": {
+            "required": "Campo obbligatorio"
+            
+        },"shortDescription": {
+            "required": "Campo obbligatorio",
+            "maxlength": "Massimo 30 caratteri"
+        }
+    },
+    "data_type" : "Tipo di Dati",
+
+    "label_button" : "chiudi",
+    "error_message" : "Si è verificato un errore",
+    "error_code_1062":"Valore duplicato",
+    "header_confirm_ins_message" : "Confermi di voler inserire la seguente segnalazione?",
+    "body_confirm_ins_message" : "Confermi di voler inserire la seguente segnalazione?",
+    "perma_header_message" : "Ottieni il permalinke della tua segnalazione",
+    "tag_desc" : "descrivi bene la tua segnalazione nel campo <b>note</b> così da generare dei <b>tag</b> e rendere la tua segnalazione facilmente <b>rintracciabile</b>",
+    "no_report_desc" : "non hai inserito ancora nessuna segnalazione"
+}

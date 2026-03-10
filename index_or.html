@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="it-IT" >
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="keywords" content="GLR" />
+<meta name="description" content="GLR Gestione Logistica Remota" />
+<meta name="author" content="Nicola Rapuano - nicolasrapuano@gmail.com" />
+
+<link rel="stylesheet" href="css/ext/bootstrap.min.css" >
+<link rel="stylesheet" href="css/ext/ie10-viewport-bug-workaround.css" >
+<link rel="stylesheet" href="css/ext/bootstrap-glyphicons.css" 	media="screen">
+<link rel="stylesheet" href="css/ext/bootstrap-table.css" media="screen">
+<link rel="stylesheet" href="css/ext/bootstrap-table-filter-control.min.css" media="screen">
+<link rel="stylesheet" href="css/ext/dropzone.css" media="screen">
+<link rel="stylesheet" href="css/ext/responsiveslides.css" media="screen">
+<link rel="stylesheet" href="css/ext/bootstrap-select.min.css" media="screen">
+<link rel="stylesheet" href="css/ext/bootstrap-datetimepicker.min.css" media="screen">
+<link rel="stylesheet" href="css/ext/jquery.bootstrap-touchspin.min.css" media="screen">
+<link rel="stylesheet" href="css/ext/bootstrap-editable.css" media="screen">
+ 
+
+
+
+
+
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<!--Meta Tag Specifici per OS Windows-->
+<meta name="application-name" content="GLR Gestione Logistica Remota" />
+<meta name="msapplication-TileImage" content="css/img/144x144.png"> 
+<meta name="msapplication-TileColor" content="#cc194b">
+<!--Meta Tag Specifici per iOS-->
+<link rel="apple-touch-icon" href="css/img/152x152.png">
+<meta name="apple-mobile-web-app-capable" content="yes"> 
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="GLR Gestione Logistica Remota">
+
+<!-- css run -->
+
+<link rel="stylesheet" href="css/app/style.css" type="text/css" />
+
+
+<title></title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#cc194b"/>
+ 
+</head>
+
+<body>
+
+	<noscript>
+		<img src='css/img/ind.jpg' width='600' alt=""/><br> &nbsp;&nbsp;I'm
+		sorry, GLR Gestione Logistica Remota require <b>javascript enabled</b>
+	</noscript>
+
+	<!-- page content -->
+	<div id="wrap">
+
+		<!-- navbar -->
+		<div id="navbar_content"></div>
+
+		<!-- content -->
+		<div id="content"></div>
+
+		<!-- push content -->
+		<div id="push"></div>
+
+	</div>
+
+	<!-- footer -->
+	<div id="footer_content"></div>
+
+	<!-- all javascript library include
+    ================================================== -->
+            <script async>
+window.onload = () => {
+'use strict'; 
+if ('serviceWorker' in navigator) {
+navigator.serviceWorker
+.register('./service-worker.js').then(function(registration) {
+          console.log('Service worker registered successfully', registration);
+        }).catch(function(err) {
+          console.log('Service worker registration failed: ', err);
+        });;
+}
+}
+</script>
+<div id="scriptBundle">
+    <script type="text/javascript" src="https://use.fontawesome.com/releases/v5.12.0/js/all.js" data-auto-replace-svg="nest"></script>
+</div>
+
+
+	
+	<script type="text/javascript" src="js/lib/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="js/lib/jquery-ui-1.11.4.custom.min.js"></script>
+	<script type="text/javascript" src="js/lib/underscore-min.js"></script>
+    <script type="text/javascript" src="js/lib/backbone-min.js"></script>
+    <script type="text/javascript" src="js/lib/backbone.localStorage.min.js"></script>
+	<script type="text/javascript" src="js/lib/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/lib/bootstrap-editable.min.js"></script>
+	<script type="text/javascript" src="js/lib/ie10-viewport-bug-workaround.js"></script>
+	<script type="text/javascript" src="js/lib/jquery.serializejson.js"></script>
+	<script type="text/javascript" src="js/lib/bootstrap-table/bootstrap-table.min.js"></script>
+ 	<script type="text/javascript" src="js/lib/bootstrap-table/extensions/i18n-enhance/bootstrap-table-i18n-enhance.js"></script>
+	<script type="text/javascript" src="js/lib/bootstrap-table/extensions/filter-control/bootstrap-table-filter-control.min.js"></script>
+        <script type="text/javascript" src="js/lib/bootstrap-table/extensions/editable/bootstrap-table-editable.min.js"></script>
+    <script type="text/javascript" src="js/lib/oauth.js"></script>
+	<script type="text/javascript" src="js/lib/nicRap1.js"></script>
+	<script type="text/javascript" src="js/lib/nicRap2.js"></script>
+    <script type="text/javascript" src="js/lib/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="js/lib/additional-methods.min.js"></script>
+	<script type="text/javascript" src="js/lib/md5.js"></script>
+	<script type="text/javascript" src="js/lib/sha512.js"></script>
+	<script type="text/javascript" src="js/lib/jquery.gravatar.js"></script>
+	<script type="text/javascript" src="js/lib/infobubble.js"></script>
+	<script type="text/javascript" src="js/lib/animatescroll.js"></script>
+	<script type="text/javascript" src="js/lib/moment-langs.min.js"></script>
+	<script type="text/javascript" src="js/lib/bootbox.all.min.js"></script>
+    <script type="text/javascript" src="js/lib/dropzone.min.js"></script>
+	<script type="text/javascript" src="js/lib/responsiveslides.min.js"></script>
+    <script type="text/javascript" src="js/lib/bootstrap-select.min.js"></script>
+    <script type="text/javascript" src="js/lib/i18n/defaults-it_IT.min.js"></script>
+    <script type="text/javascript" src="js/lib/screenfull.js"></script>    
+	<script type="text/javascript" src="js/lib/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="js/lib/he.js"> </script>
+	<script type="text/javascript" src="js/lib/locale/bootstrap-datetimepicker.it.js" charset="UTF-8"></script>
+	<script type="text/javascript" src="js/lib/locale/bootstrap-datetimepicker.de.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="js/lib/bootstrap-filestyle.min.js"> </script>
+    <script type="text/javascript" src="js/lib/jquery.bootstrap-touchspin.min.js"> </script>
+        
+    <script  src="js/lib/rap-jsonform.js"> </script>
+    
+
+	<!-- app -->
+	
+	<script type="text/javascript" src="js/app.min.js" ></script>
+	<!-- router -->
+	<script type="text/javascript" src="js/routers/app.routers.router.min.js"></script>
+	<!-- model -->
+	 <script type="text/javascript" src="js/models/app.models.session.js"></script>
+        <script type="text/javascript" src="js/models/app.models.language.min.js"></script>
+	<script type="text/javascript" src="js/models/app.models.token.min.js?v=001"></script>
+       
+	<script type="text/javascript" src="js/models/app.models.user.min.js"></script>
+        <script type="text/javascript" src="js/models/app.models.person.js"></script>
+         <script type="text/javascript" src="js/models/app.models.pmaPill.js"></script>
+       
+	<script type="text/javascript" src="js/models/app.models.type.min.js?v=001"></script>
+	<script type="text/javascript" src="js/models/app.models.data_type.js"></script>
+	<script type="text/javascript" src="js/models/app.models.report.min.js?v=001"></script>
+        <script type="text/javascript" src="js/models/app.models.image.min.js?v=001"></script>
+         <script type="text/javascript" src="js/models/app.models.breadcrumb.js?v=001"></script>
+	<!-- collection -->
+	<script type="text/javascript" src="js/collections/app.collections.languages.min.js"></script>
+	<script type="text/javascript" src="js/collections/app.collections.tokens.min.js?v=001"></script>
+     
+	<script type="text/javascript" src="js/collections/app.collections.users.min.js?v=001"></script>
+	<script type="text/javascript" src="js/collections/app.collections.persons.js"></script>
+        <script type="text/javascript" src="js/collections/app.collections.pmaPills.js"></script>
+         <script type="text/javascript" src="js/collections/app.collections.sessions.min.js"></script>
+	
+        <script type="text/javascript" src="js/collections/app.collections.types.min.js?v=001"></script>
+	<script type="text/javascript" src="js/collections/app.collections.reports.min.js?v=001"></script>
+	<script type="text/javascript" src="js/collections/app.collections.images.min.js?v=001"></script>
+        <script type="text/javascript" src="js/collections/app.collections.breadcrumbs.js?v=001"></script>
+	<!-- view -->
+
+	<script type="text/javascript" src="js/views/app.views.error.min.js"></script>
+	<script type="text/javascript" src="js/views/app.views.footer.min.js"></script>
+	<script type="text/javascript" src="js/views/app.views.help.min.js"></script>
+	<script type="text/javascript" src="js/views/app.views.index.min.js"></script>
+	<script type="text/javascript" src="js/views/app.views.login.min.js"></script>
+	<script type="text/javascript" src="js/views/app.views.data_type.js"></script>
+	<script type="text/javascript" src="js/views/app.views.dashboard.js"></script>
+        <script type="text/javascript" src="js/views/app.views.data_type_edit.js"></script>
+      
+        <script type="text/javascript" src="js/views/app.views.data_type_editType.js"></script>
+	<script type="text/javascript" src="js/views/app.views.hr.js"></script>
+	<script type="text/javascript" src="js/views/app.views.hr_edit.js"></script>
+        <script type="text/javascript" src="js/views/app.views.hr_user.js"></script>
+        
+        <script type="text/javascript" src="js/views/app.views.hr_crd.js"></script>
+	<script type="text/javascript" src="js/views/app.views.hr_mnt.js"></script>
+        <script type="text/javascript" src="js/views/app.views.rma_adm.js"></script>
+	<script type="text/javascript" src="js/views/app.views.rma_new.js"></script>
+        <script type="text/javascript" src="js/views/app.views.rma_view.js"></script>
+        <script type="text/javascript" src="js/views/app.views.rma_new_contatori.js"></script>
+        <script type="text/javascript" src="js/views/app.views.rma_view_contatori.js"></script>
+        <script type="text/javascript" src="js/views/app.views.rma_detail.js"></script>
+        <script type="text/javascript" src="js/views/app.views.rma_management.js"></script>
+        <script type="text/javascript" src="js/views/app.views.rma_management_edit.js"></script>
+        <script type="text/javascript" src="js/views/app.views.rma_int_fare.js"></script>
+        <script type="text/javascript" src="js/views/app.views.rma_int_fatti.js"></script>
+        <script type="text/javascript" src="js/views/app.views.rma_pannello_ore.js"></script>
+        <script type="text/javascript" src="js/views/app.views.rfa_approva.js"></script>
+        <script type="text/javascript" src="js/views/app.views.rfa_new.js"></script>
+        <script type="text/javascript" src="js/views/app.views.rfa_view.js"></script>
+        <script type="text/javascript" src="js/views/app.views.rfa_nad.js"></script>
+        <script type="text/javascript" src="js/views/app.views.rfa_vad.js"></script>
+         <script type="text/javascript" src="js/views/app.views.rfa_nag.js"></script>
+        <script type="text/javascript" src="js/views/app.views.rfa_vag.js"></script>
+        <script type="text/javascript" src="js/views/app.views.rfa_management.js"></script>
+        <script type="text/javascript" src="js/views/app.views.rfa_ddt.js"></script>
+         <script type="text/javascript" src="js/views/app.views.rfa_fornitori.js"></script>
+        <script type="text/javascript" src="js/views/app.views.rfa_schede.js"></script>
+       
+        <script type="text/javascript" src="js/views/app.views.doc.js"></script>
+        <script type="text/javascript" src="js/views/app.views.gap_adm.js"></script>
+        <script type="text/javascript" src="js/views/app.views.gap_doc_new.js"></script>
+        <script type="text/javascript" src="js/views/app.views.gap_doc_view.js"></script>
+        <script type="text/javascript" src="js/views/app.views.gap_doc_list.js"></script>
+        <script type="text/javascript" src="js/views/app.views.gap_pma.js"></script>
+        <script type="text/javascript" src="js/views/app.views.asa.js"></script>
+        
+	
+          <!-- Load our React component. -->
+       
+	<script type="text/javascript" src="js/views/app.views.planning.js"></script>
+        <script type="text/javascript" src="js/views/app.views.archive.js"></script>
+        <script type="text/javascript" src="js/views/app.views.archive_detail.js"></script>
+        <script type="text/javascript" src="js/views/app.views.archive_list.js"></script>
+        <script type="text/javascript" src="js/views/app.views.send.js"></script>
+        <script type="text/javascript" src="js/views/app.views.send_print.js"></script>
+        <script type="text/javascript" src="js/views/app.views.send_doc_print.js"></script>
+	
+	
+	<script type="text/javascript" src="js/views/app.views.navbar.min.js?v=001"></script>
+	<script type="text/javascript" src="js/views/app.views.password.min.js"></script>
+        <script type="text/javascript" src="js/views/app.views.registration.js"></script>
+	<script type="text/javascript" src="js/lib/appx.js"></script>
+       <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-57030461-1"></script>
+        <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-111392777-1');
+</script>	
+
+
+</body>
+
+
+</html>

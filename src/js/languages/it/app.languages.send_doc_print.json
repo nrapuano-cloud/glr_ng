@@ -1,0 +1,14 @@
+{
+    "type": "Invio Documenti da Stampare",
+    "lang" : "it",
+    "error_message" : "Si è verificato un errore",
+    "error_message1" : "Si è verificato un graaande errore",
+    "form_messages":{
+        "copie":{
+            "required":"Inserire numero di copie",
+            "range":"Inserire un numero di copie corretto",
+            "number":"Inserire un numero corretto"
+        }
+    }
+    
+}

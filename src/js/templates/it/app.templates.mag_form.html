@@ -1,0 +1,95 @@
+<h3 style="text-align: center;color:black;font-weight:bold;border:2px solid #a1a1a1;">SCHEDA ARTICOLO MAGAZZINO  </h3><br>
+<form  id="edit">
+    <div class="messages"></div>
+    <input type="hidden" class="form-control" name="id" id="id">
+   
+    <div id="step1">
+       
+                <div class="row">
+                    <div class="form-group col-sm-6">
+                    <label >Categoria</label>
+                    <select  class="form-control" name="categoria" id="categoria"  />
+                    </div>
+               
+                    <div class="form-group col-sm-6">
+                    <label >Sotto Categoria</label>
+                    <select  class="form-control" name="sub_categoria" id="sub_categoria"  />
+                    </div>
+                    <!--div class="form-group col-sm-4">
+                        <label >RMA Categoria</label>
+                        <input type="text"  class="form-control" name="rma_categoria" id="rma_categoria"  readonly ></input>
+                        </div-->
+                </div>
+            </div> 
+           
+        </div>    
+    </div>
+    <div id="step2">
+
+    </div>
+    <div id="stepx">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Allegati <span class="badge" id="badge_all"></span></h3>
+               
+            </div>
+            <div class="panel-body">
+               
+                   
+                      <div class="form-group col-sm-2">
+                      
+                        <!--button type="button"  class="btn btn-services-blue  scrool wow fadeIn btn-block btn-large all"  id="nuovo_allegato"  name="nuovo_allegato"   >Nuovo allegato</button-->
+                    </div>      
+                    <div class="form-group col-sm-12">
+                        <table id="table_all" class="table table-striped"
+                        data-show-refresh="false"
+                        data-show-columns="true"
+                        data-search="true"
+                        data-cache="false"
+                        data-pagination="true" >
+                    </table>
+                     </div>
+                
+            </div>
+          </div>        
+    <br> 
+    <div class="md-form">
+        <label for="note">Note</label>
+        <textarea  id="note" name="note" class="md-textarea form-control" rows="3"></textarea>
+    </div>
+    <br>
+    <label >    * Campi obbligatori</label>
+    <span class="alert1"></span>
+    <br>
+    <br>
+    <button type="submit"  class="btn btn-info  btn-block btn-large" id="invio"  name="invio"  value="Invio" >Invio</button>
+    </div>
+
+</form>
+
+<div id="err"></div>
+       
+    <!-- Modal -->
+    <div id="modal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                 
+                    <h4 class="modal-title"></h4>
+                </div>
+                
+                  
+                   
+               
+                <div class="modal-body">
+                     <h3 id="myModalLabel"></h3>
+                   <textarea class="form-control" name="descriz" id="descriz" readonly rows="3"></textarea>
+                   <img   class="img-fluid" id="image"> 
+                </div>
+                <div class="modal-footer">
+                
+                  
+                </div>
+            </div>
+        </div>
+    </div>    

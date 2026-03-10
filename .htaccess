@@ -1,0 +1,16 @@
+#RewriteEngine on
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteCond %{REQUEST_FILENAME} !-f
+#Rewritecond %{REQUEST_FILENAME} !/css
+#RewriteRule ^(js/) index.html?@uri=/$1 [L,QSA]
+#RewriteRule . index.html [L]
+#RewriteRule ^(.*)$ index.html?q=$1 [L,QSA]
+#RewriteRule ^(.*)$ index.html?@uri=/$1 [L,QSA]
+#RewriteRule  "^foo\.html$"  "index.html" [PT]
+ Options All -Indexes 
+RewriteEngine On
+    RewriteBase /
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ index.html/$1 [L]

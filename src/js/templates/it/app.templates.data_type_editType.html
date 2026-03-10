@@ -1,0 +1,74 @@
+<!-- Registration -->
+<div class="container-fluid">
+
+
+<style>
+        .update {
+            
+            margin-right: 5px;
+        }
+        .remove {
+        
+            margin-left: 5px;
+        }
+        .alert {
+            padding: 0 14px;
+            margin-bottom: 0;
+            display: inline-block;
+        }
+  </style>
+
+ <br/><br/><br/>
+ 
+    <div class="row">
+        <div class="col-lg-12">
+            <ol class="breadcrumb">
+               
+               
+            </ol>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 ">
+            
+            <div  id="tipi"  >
+              
+            </div>
+        </div>
+    </div>
+
+ <!-- Modal -->
+    <div id="modal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                 
+                    <h4 class="modal-title"></h4>
+                </div>
+                 
+                <div class="modal-body">
+                    <h3 id="myModalLabel"></h3>
+                    <form id="modAlle">
+                        <input type="hidden"  name="pratica['+$prat+'][alle]['+$i+'][id]">
+                        <div class="form-group col-lg-6">
+                            <label  id="lblDescrizione"  for="pratica['+$prat+'][alle]['+$i+'][descrizione]">Descrizione</label>
+                            <input type="text" class="form-control" name="pratica11" id="pratica11"  placeholder="" >
+                        </div>
+
+                        <div class="form-group col-lg-5">
+                            <label for="pratica['+$prat+'][alle]['+$i+'][file]">Seleziona file</label>
+                            <input type="file" name="pratica['+$prat+'][alle]['+$i+'][file]" class="form-input col-lg-12" id="pratica['+$prat+'][alle]['+$i+'][file]" accept="image/*">
+
+                        </div>
+
+                       <button type="button" id="btnAlle" name="btnAlle" class="btn btn-primary submit ">Submit</button>
+                   </form >
+                </div>
+                <div class="modal-footer">
+                  
+                  
+                </div>
+            </div>
+        </div>
+    </div>    
+</div>

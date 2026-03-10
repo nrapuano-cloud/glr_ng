@@ -1,0 +1,116 @@
+<div class="container-fluid">
+    
+    <style>
+        .update {
+            color: #333;
+            margin-right: 5px;
+        }
+        .remove {
+            color: red;
+            margin-left: 5px;
+        }
+        .alert {
+            padding: 0 14px;
+            margin-bottom: 0;
+            display: inline-block;
+        }
+    </style>
+    <br/><br/><br/>
+    <div class="row">
+        <div class="col-lg-12">
+            <ol class="breadcrumb"></ol>
+        </div>
+    </div>
+
+  
+    <div class="panel panel-default">
+      <!--div class="panel-heading">Panel heading without title</div-->
+      <div class="panel-body">
+
+      </div>   <!--/panel-body-->
+    </div>  <!--/panel-default-->
+
+    <div class="panel panel-default">
+    <!--div class="panel-heading">Panel heading without title</div-->
+        <div class="panel-body">
+            <p >
+                <!--a class="create btn btn-default" href="javascript:" id="new"></a-->
+                <span class="alert"></span>
+            </p>
+            <div class="row">
+                <div class="col-md-6 ">
+                    <div class="radio-inline">
+                        <label><input type="radio" value="1" name="tipoReparto" id="tipoReparto" >Infanzia</label>
+                    </div>
+                    <div class="radio-inline">
+                      <label><input type="radio" value="2" name="tipoReparto" id="tipoReparto">Sociale</label>
+                    </div>
+                     <div class="radio-inline">
+                      <label><input type="radio" value="3" name="tipoReparto" id="tipoReparto">Tecnostruttura</label>
+                    </div>
+                     <div class="radio-inline">
+                      <label><input type="radio" value="4" name="tipoReparto" id="tipoReparto" checked>Tutti</label>
+                    </div>
+                </div>     
+                <label id="titleTipo" class="col-md-4 "></label>
+                <div id="downFile" class="col-md-2 pull-right"></div>
+            </div>
+            <table id="table"
+               data-show-refresh="true"
+               data-show-columns="true"
+               data-search="true"
+               data-cache="false"
+               
+               data-pagination="false"
+               data-height="450"
+            >
+                <thead>
+                    <tr>
+                        <!--th data-field="id_person" hidden="true"></th-->
+                        <th data-field="name" data-sortable="true">Coordinatore</th>
+                        <!--th data-field="tipo" data-sortable="true">Tipo</th>
+                        <th data-field="active" data-sortable="true">Area</th-->
+
+                        <!--th data-field="action"
+                            data-align="center"
+                            data-formatter="actionFormatter"
+                            data-events="actionEvents">Action</th-->
+                    </tr>
+                </thead>
+            </table>
+        </div><!--/panel-body-->
+
+    </div>   <!--/panel-default-->
+</div>  <!--/container-->
+
+    <div id="modal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Assegna al Coordinatore Tecnico: <label id="lblName"></label></h4>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" class="form-control" name="idCoordinatore" id="idCoordinatore"> 
+                    <div class="row">
+                        <div class="form-group col-sm-8">
+                            <label for="department">Servizio</label>
+                            <select  id="department" name="department"  class="form-control" ></select>
+                        </div>
+                    </div>
+                   
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary submit">Submit</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+  <script type="text/javascript">
+
+function actionFormatter(value) {
+}
+    </script>
+

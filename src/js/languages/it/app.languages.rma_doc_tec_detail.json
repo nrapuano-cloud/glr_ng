@@ -1,0 +1,7 @@
+{
+    "type": "rma_doc_tec_detail",
+    "lang" : "it",
+    "error_message" : "Si è verificato un errore",
+    "error_message1" : "Si è verificato un graaande errore",
+    "header_arch_message":"Lista Reparti"
+}

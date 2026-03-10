@@ -1,0 +1,146 @@
+<!-- Registration -->
+<div class="container-fluid">
+
+
+    <style>
+        .update {
+            color: #333;
+            margin-right: 5px;
+        }
+        .remove {
+            color: red;
+            margin-left: 5px;
+        }
+        .alert {
+            padding: 0 14px;
+            margin-bottom: 0;
+            display: inline-block;
+        }
+    </style>
+<br/><br/><br/>
+   
+    <div class="row">
+        <div class="col-lg-12">
+            <ol class="breadcrumb">
+               
+               
+            </ol>
+        </div>
+    </div>
+     <P class="toolbar1">
+        <span class="alert"></span>
+    </p>
+    <div class="panel panel-default">
+        <div class="panel-heading">Personale</div>
+        <div class="panel-body">
+            <form class="registrationForm" id="registrationForm" method="post">
+
+                <input type="hidden" class="form-control" name="id_person" id="id_person">
+                <input type="hidden" class="form-control" name="action" value="update" id="action">
+                <div class="messages"></div>
+                 <span class="alert1"></span>
+                <div class="row">
+                    <div class="form-group col-sm-4">
+                       <label for="first_name">Nome *</label>
+                       <input type="text"   class="form-control" name="first_name" id="first_name" value="" placeholder="Nome" />
+                    </div>
+                    <div class="form-group col-sm-4">
+                        <label for="last_name">Cognome *</label>
+                        <input type="text"   class="form-control" name="last_name" id="last_name" value=""   placeholder="Cognome" />
+                    </div>
+                    <div class="form-group col-sm-4">
+                        <label for="codice">Codice</label>
+                        <input type="text"   class="form-control" name="codice" id="codice" value=""   placeholder="Codice"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-sm-4">
+                        <label for="codice_fiscale">Codice Fiscale *</label>
+                      <input type="text" class="form-control" name="codice_fiscale" id="codice_fiscale" value="" placeholder="Codice Fiscale" />
+                    </div>
+                    <div class="form-group col-sm-4">
+                       <label for="role">Ruolo *</label>
+                       <select  id="role" name="role"  class="form-control " ></select>
+                    </div>
+                     <div class="form-group col-sm-4">
+                       <label for="roles">Ruolo * Multi *</label>
+                       <select  id="roles" name="roles"  class="form-control selectpicker"  multiple="multiple" ></select>
+                    </div>
+                     <div class="form-group col-sm-4">
+                      <label><input id="incaricato_antincendio" name="active" type="checkbox" value="">Incaricato registro antincendio</label>
+                    </div>
+                    <div class="form-group col-sm-2">
+                      <label><input id="opz_man" name="active" type="checkbox" value="">Opz-Manutentore</label>
+                    </div>
+                    <div class="form-group col-sm-2">
+                      <label><input id="active" name="active" type="checkbox" value="">Attivo</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-sm-4">
+                       <label >Servizio di default </label>
+                      <select  id="department" name="department" class="form-control" ></select>
+                    </div>
+                    <div class="form-group col-sm-4">
+                       <label for="department">Servizi aggiuntivi</label>
+                      <select  id="department_plus" name="department_plus"  class="form-control selectpicker" multiple="multiple"></select>
+                    </div>
+                    <div class="form-group col-sm-4">
+                        <label id="lblmoduli" for="moduli">Moduli/Navbar</label>
+                        <div class="form-group " >
+                            <button type="button" id="moduli" name="moduli" class="btn btn-primary col-lg-12" style="background-color:#ffc108;" data-tipo="Moduli/Navbar" data-title="Configura Moduli/Navbar "  title="Configura Moduli/Navbar alla persona">Moduli/Navbar</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row ">
+                    <div class="form-group col-lg-12"  style="background-color: #f5f5f5">
+                        <label id="lblemailMas" class="form-group col-lg-4" >E-mail</label>
+                       
+                        <a class="email-Plus"  title="Add Email"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span></a>
+                    </div>
+                     
+                </div>
+                <div id="email"></div>
+                
+                <div class="row ">
+                    <div class="form-group col-lg-12" style="background-color: #f5f5f5">
+                        <label id="lblTelefonoMas" class="form-group col-lg-4">Telefono</label>
+                        <a class="telefono-Plus"  title="Add Telefono"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span></a>
+                        
+                    </div>
+                </div>   
+                <div id="telefoni"></div>
+                
+                <div class="row">
+                    <div class="form-group col-lg-12 "> 
+                        <button type="submit" id="submit" class="btn btn-primary submit " value="Create"></button>
+                    </div>
+                </div>
+           
+            </form>
+        </div>
+    </div>
+       <div id="modal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title"></h4>
+                </div>
+                <div class="modal-body">
+                    <div class="panel panel-default">
+                        <div class="panel-heading"><b>Moduli/Navbar</b></div>
+                        <div class="panel-body    navpanel"></div>
+                    
+                    </div>           
+                </div>
+                <div class="modal-footer">
+                   
+                   
+                </div>
+                
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+</div>

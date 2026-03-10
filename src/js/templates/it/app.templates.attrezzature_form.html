@@ -1,0 +1,64 @@
+<input type="button" name="attr_list"  id="attr_list" value="Lista Attrezzature ed Impianti"><h3 style="text-align: center;color:black;font-weight:bold;border:2px solid #a1a1a1;">    SCHEDA ATTREZZATURA/IMPIANTO  </h3><br>
+<form  id="edit">
+    <div class="messages"></div>
+    <input type="hidden"  name="id_attrezzatura" id="id_attrezzatura">
+    <div id="step1">
+      
+       
+        <div class="row">
+            <div class="form-group col-sm-4">
+            <label >Categoria</label>
+            <select  class="form-control" name="id_categoria" id="id_categoria"  ></select>
+            </div>
+       
+            <div class="form-group col-sm-4">
+            <label >Sotto Categoria</label>
+            <select  class="form-control" name="id_sotto_categoria" id="id_sotto_categoria"   ></select>
+            </div>
+            <div class="form-group col-sm-4">
+                <label >RMA Categoria</label>
+                <input type="text"  class="form-control" name="rma_categoria" id="rma_categoria"  readonly ></input>
+                </div>
+        </div> 
+    </div>
+    <div id="step2">
+
+    </div>
+    <div id="stepx">
+     
+    <br> 
+    <div class="md-form">
+        <label for="note">Note</label>
+        <textarea  id="note_bsa" name="note_bsa" class="md-textarea form-control" rows="3"></textarea>
+    </div>
+    <br>
+    <label >    * Campi obbligatori</label>
+    <span class="alert1"></span>
+    <br>
+    <br>
+    <button type="submit"  class="btn btn-info  btn-block btn-large" id="invio"  name="invio"  value="Invio" >Invio</button>
+    </div>
+
+</form>
+
+<div id="err"></div>
+       
+    <!-- Modal -->
+    <div id="modal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                 
+                    <h4 class="modal-title"></h4>
+                </div>
+                <div class="modal-body">
+                     <h3 id="myModalLabel"></h3>
+                   <textarea class="form-control" name="descriz" id="descriz" readonly rows="3"></textarea>
+                   <img   class="img-fluid" id="image"> 
+                </div>
+                <div class="modal-footer">
+                
+                </div>
+            </div>
+        </div>
+    </div>    

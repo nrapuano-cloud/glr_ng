@@ -1,0 +1,73 @@
+    
+   
+  
+        <div class="panel-body">
+            <p class="toolbar">
+                <a class="create btn btn-default" >Nuovo</a>
+               
+            </p>
+            
+            <table id="table" class="table table-striped"
+                   data-show-refresh="false"
+                   data-show-columns="false"
+                   data-search="true"
+                   data-cache="false"
+
+                   data-pagination="false"
+                  >
+                <thead>
+                    <tr>
+                        <!--th data-field="id_person" hidden="true"></th-->
+                        <th data-field="last_name" data-sortable="true">Cognome</th>
+                        <th data-field="first_name" data-sortable="true">Nome</th>
+                       
+                        <th data-field="action"
+                            data-align="center"
+                            data-formatter="actionFormatter"
+                            data-events="actionEvents">Action</th>
+                    </tr>
+                </thead>
+            </table>
+    
+        </div><!--/panel-body-->
+  
+    
+    <div id="modal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title"></h4>
+                </div>
+                <div class="modal-body">
+                      <input type="hidden" class="form-control"  name="id_person" >
+                      <input type="hidden" class="form-control"  name="id_user" >
+                     <div class="form-group">
+                        <label>Username</label>
+                        <input type="text" class="form-control" name="username" placeholder="Username">
+                    </div>
+                     <div class="row">
+                        <div class="form-group col-sm-8">
+                          <label for="codice">Password</label>
+                          <input type="text" class="form-control " name="codice" id="codice" placeholder="Password">
+                         </div>
+                         <div class="form-group col-sm-4">
+                           <label for="genPw">Password 8<!--input type="number" class="form-control col-sm-1" name="chr" id="chr" value="8"--> chr</label>
+                           <button type="button" class="btn btn-default form-control genPw" name="genPw" id="genPw">Genera</button>
+                        </div>
+                    </div>     
+                    <div class="form-group">
+                        <label>Codice Fiscale</label>
+                        <input type="text" class="form-control" name="codice_fiscale" placeholder="Codice Fiscale" readonly>
+                    </div>
+                                       
+              
+          
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary submit">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div ><!-- /.modal -->

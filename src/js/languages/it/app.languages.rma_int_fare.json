@@ -1,0 +1,10 @@
+{
+    "type": "rma_int_fare",
+    "lang" : "it",
+    "new" : "Nuovo",
+    "error_message" : "Si è verificato un errore",
+    "error_message1" : "Si è verificato un graaande errore",
+    "header_hr_message":"Lista User",
+    "header_rma_intervento_chiuso_message":"Chiusura Intervento",
+   "body_intervento_chiuso_message":"Intervento chiuso correttamente"
+}

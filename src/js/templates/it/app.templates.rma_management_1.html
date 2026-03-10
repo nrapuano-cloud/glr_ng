@@ -1,0 +1,120 @@
+<div class="container-fluid">
+    <br/><br/><br/>
+    <div class="row">
+        <div class="col-lg-12">
+            <ol class="breadcrumb"></ol>
+        </div>
+    </div>
+   
+    <div class="panel panel-default">
+        <div class="panel-heading">Gestione RMA - Numero richiesta: <label id="lblnum-prog" ></label> del <label id="lbldata" ></label> - Categoria: <label id="lblcategoria" ></label> - Tempistica: <label id="lbltempistica" ></label><span id="lblstatus" class="badge col-sm-1">Stato</span>
+        </div>
+    </div> <!--div class="panel panel-default"-->
+    <form class="manageForm" id="manageForm" method="post">
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingOne">
+                <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <!--i class="more-less glyphicon glyphicon-plus"></i-->
+                        Dati Richiesta Manutenzione
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                <div class="panel-body">
+                    <input type="hidden" class="form-control" name="id" id="id">
+                    <div class="row">
+
+                        <div class="form-group col-sm-4">
+                            <label id="lblname" for="name">Servizio</label>
+                            <input type="text" class="form-control" name="name" id="name" readonly >
+                        </div>
+                        <div class="form-group col-sm-4">
+                            <label  id="operatore" >Referente</label>
+                            <input type="text" class="form-control" name="operatore" id="operatore" readonly>
+                        </div>
+                    </div>
+                    <div class="row">
+
+                        <div class="form-group col-sm-6">
+                            <label id="lblname" for="descrizione">Descrizione</label>
+
+                             <textarea class="form-control" name="descrizione" id="descrizione" readonly  rows="3"></textarea>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label  id="ubicazione" >Ubicazione</label>
+
+                            <textarea class="form-control" name="ubicazione" id="ubicazione" readonly rows="3"></textarea>
+                          
+                        </div>
+                          
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default"  id="panel1">
+            <div class="panel-heading" role="tab" id="headingTwo">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <!--i class="more-less glyphicon glyphicon-plus"></i-->
+                        <label id="lblInt-prog" ></label> Interventi Programmati
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                <div class="panel-body">
+                    <div id="listInterventi"></div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingThree">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <!--i class="more-less glyphicon glyphicon-plus"></i-->
+                        Nuovo Intervento
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                <div class="panel-body">
+                    <div id="newIntervento"></div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingFour">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        <!--i class="more-less glyphicon glyphicon-plus"></i-->
+                        Chiusura Richiesta Manutenzione
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                <div class="panel-body">
+                
+                    <div id="chiusura"></div>   
+                </div>
+            </div>
+        </div>
+
+    </div><!-- panel-group -->
+    </form>
+    
+ </div> 
+        
+    
+
+ 
+
+  
+  
+
