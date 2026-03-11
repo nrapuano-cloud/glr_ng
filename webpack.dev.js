@@ -5,6 +5,6 @@ const { merge } = require('webpack-merge');
    mode: 'development',
    devtool: 'inline-source-map',
    devServer: {
-     static: './../dist_ng',
+     static: './dist_ng',
    },
  });

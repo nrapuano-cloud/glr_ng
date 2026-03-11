@@ -21,7 +21,7 @@ module.exports = {
      
   },
     static: {
-      directory: path.join(__dirname, "dist")
+      directory: path.join(__dirname, "/../dist_ng")
     },
  
    
@@ -205,7 +205,7 @@ module.exports = {
   ],
   output: {
     filename: '[name].[contenthash].bundle.js',
-    path: path.resolve(__dirname, '../dist'),
+    path: path.resolve(__dirname, '../dist_ng'),
    
     clean: true,
   },
