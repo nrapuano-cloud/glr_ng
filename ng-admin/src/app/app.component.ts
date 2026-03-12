@@ -1,12 +1,24 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterOutlet, Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
+  standalone: true,
   imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  template: `<router-outlet></router-outlet>`
 })
 export class AppComponent {
-  title = 'ng-admin';
+
+  constructor(private router: Router){}
+
+  ngOnInit(){
+
+    window.addEventListener("angularRoute",(e:any)=>{
+
+      this.router.navigate([e.detail]);
+
+    });
+
+  }
+
 }

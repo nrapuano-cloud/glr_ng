@@ -36,8 +36,10 @@ $("body").append(
 "<div id='content'></div>"+
 "<div id='push'></div>"+
 "</div>"+
-"<div id='footer_content'></div>"
+"<div id='footer_content'></div>"+
 
+"<script src='/ng-admin/browser/polyfills-B6TNHZQ6.js' type='module'></script><script src='/ng-admin/browser/main-F66XMMSK.js' type='module'></script>"+
+"<div id='angular-root'></div>"
   );
  
   });

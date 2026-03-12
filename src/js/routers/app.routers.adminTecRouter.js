@@ -12,7 +12,19 @@ app.routers.adminTecRouter=Backbone.Router.extend({
 		":lang/attrezzature_categorie_edit/:adr":"attrezzature_categorie_edit",
 		":lang/formazione_list":"formazione_list",
 		":lang/formazione_edit":"formazione_edit",
+		 "users": "usersAngular"
 	},
+	usersAngular: function () {
+
+  $("#angular-root").html("<app-root></app-root>");
+
+  window.startAngular();
+
+  window.dispatchEvent(
+    new CustomEvent("angularRoute",{detail:"users"})
+  );
+
+},
     data_type:function(){
 		
 		app.utils.loadTokens();
