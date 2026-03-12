@@ -15,7 +15,7 @@ app.routers.adminTecRouter=Backbone.Router.extend({
 		 "users": "usersAngular"
 	},
 	usersAngular: function () {
-
+//esssieee
   $("#angular-root").html("<app-root></app-root>");
 
   window.startAngular();
